@@ -109,9 +109,6 @@
       }
 
       .parallax {
-        background-image:
-          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-          url("./assets/img3.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -150,7 +147,7 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.4);
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         transition: background 0.3s ease;
       }
@@ -158,26 +155,26 @@
       .category-content {
         text-align: center;
         color: white;
-        padding: 1rem;
-        margin-bottom: 2rem;
+        padding: 2rem;
       }
 
       .category-title {
-        font-size: 2rem;
+        font-size: 3rem;
+        font-weight: 700;
         margin-bottom: 1rem;
         letter-spacing: 3px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
       .category-description {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 2rem;
         opacity: 0.9;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
       }
 
       .category-btn {
-        padding: 10px 25px;
+        padding: 12px 30px;
         font-size: 1rem;
         font-weight: 500;
         border: 2px solid white;
@@ -201,33 +198,22 @@
         background: rgba(0, 0, 0, 0.6);
       }
 
-      #tentang p {
-        padding: 0 2rem;
-      }
-
-      /* Extra small devices (e.g., phones) */
-      @media (max-width: 575.98px) {
-        /* Styles for extra small screens */
-        .banner-text-properties {
-          font-size: 3rem;
-        }
-
+      /* Responsive Design */
+      @media (max-width: 991.98px) {
         .category-item {
-          height: 50vh; /* Compact on small phones */
+          height: 70vh; /* Shorter height on tablets */
         }
 
         .category-title {
-          font-size: 1.8rem;
+          font-size: 2.5rem;
+        }
+
+        .category-description {
+          font-size: 1.1rem;
         }
       }
 
-      /* Small devices (e.g., portrait tablets, large phones) */
-      @media (min-width: 576px) and (max-width: 767.98px) {
-        /* Styles for small screens */
-        .banner-text-properties {
-          font-size: 3rem;
-        }
-
+      @media (max-width: 767.98px) {
         .category-item {
           height: 60vh; /* Even shorter on mobile */
         }
@@ -246,21 +232,35 @@
         }
       }
 
-      /* Medium devices (e.g., landscape tablets, desktops) */
-      @media (min-width: 768px) and (max-width: 991.98px) {
-        /* Styles for medium screens */
-
+      @media (max-width: 575.98px) {
         .category-item {
-          height: 70vh; /* Shorter height on tablets */
+          height: 50vh; /* Compact on small phones */
         }
 
         .category-title {
-          font-size: 2.5rem;
+          font-size: 1.8rem;
         }
+      }
 
-        .category-description {
-          font-size: 1.1rem;
+      /* Extra small devices (e.g., phones) */
+      @media (max-width: 575.98px) {
+        /* Styles for extra small screens */
+        .banner-text-properties {
+          font-size: 3rem;
         }
+      }
+
+      /* Small devices (e.g., portrait tablets, large phones) */
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        /* Styles for small screens */
+        .banner-text-properties {
+          font-size: 3rem;
+        }
+      }
+
+      /* Medium devices (e.g., landscape tablets, desktops) */
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        /* Styles for medium screens */
       }
 
       /* Large devices (e.g., desktops) */
@@ -306,8 +306,8 @@
             id="navbarNav"
           >
             <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="#kategori"
-                >Produk</a
+              <a class="nav-link active" aria-current="page" href="#kategori"
+                >Beranda</a
               >
               <a class="nav-link" href="#tentang">Tentang</a>
               <a class="nav-link" href="#ulasan">Ulasan</a>
@@ -397,11 +397,11 @@
         </div>
       </section>
 
-      <!-- KATEGORI -->
+      <!-- Add this section after your banner section and before the existing container section -->
       <section id="kategori" class="category-section">
-        <div class="container-fluid p-0 my-1">
-          <div class="row g-1">
-            <!-- Category 1 -->
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <!-- Men Category -->
             <div class="col-lg-6 col-12 category-item">
               <div class="category-container">
                 <img
@@ -415,19 +415,15 @@
                     <p class="category-description">
                       Koleksi batik pria modern dan elegan
                     </p>
-                    <a
-                      class="btn btn-outline-light category-btn"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
-                    >
+                    <button class="btn btn-outline-light category-btn">
                       Lihat Koleksi
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Category 2 -->
+            <!-- Women Category -->
             <div class="col-lg-6 col-12 category-item">
               <div class="category-container">
                 <img
@@ -441,19 +437,15 @@
                     <p class="category-description">
                       Koleksi batik wanita yang memukau
                     </p>
-                    <a
-                      class="btn btn-outline-light category-btn"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
-                    >
+                    <button class="btn btn-outline-light category-btn">
                       Lihat Koleksi
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Category 3 -->
+            <!-- Kids Category -->
             <div class="col-lg-6 col-12 category-item">
               <div class="category-container">
                 <img
@@ -467,19 +459,15 @@
                     <p class="category-description">
                       Batik lucu untuk si kecil
                     </p>
-                    <a
-                      class="btn btn-outline-light category-btn"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
-                    >
+                    <button class="btn btn-outline-light category-btn">
                       Lihat Koleksi
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Category 4 -->
+            <!-- Accessories Category -->
             <div class="col-lg-6 col-12 category-item">
               <div class="category-container">
                 <img
@@ -493,77 +481,15 @@
                     <p class="category-description">
                       Aksesoris batik untuk melengkapi gaya
                     </p>
-                    <a
-                      class="btn btn-outline-light category-btn"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
-                    >
+                    <button class="btn btn-outline-light category-btn">
                       Lihat Koleksi
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- TENTANG -->
-      <section id="tentang">
-        <div
-          class="about-container container-fluid parallax"
-          style="height: 50vh"
-        >
-          <div
-            class="about-content d-flex justify-content-center align-items-center h-100 mx-auto text-center"
-            style="width: 80%"
-          >
-            <div class="myfg-white">
-              <h2 class="mb-3">Tentang Kami</h2>
-              <p class="px-1 px-md-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                tellus nisl, momlllis at vulputate a, laoreet a elit. Nullam
-                rutrum orci sapien, sed consectetur purus faucibus in. Vivamus
-                ipsum mauris, ultrices in dignissim tempor, dictum vitae diam.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="ulasan">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus
-          nisl, mollis at vulputate a, laoreet a elit. Nullam rutrum orci
-          sapien, sed consectetur purus faucibus in. Vivamus ipsum mauris,
-          ultrices in dignissim tempor, dictum vitae diam. Etiam a faucibus
-          diam, et eleifend nulla. Sed id elit nulla. Mauris eleifend finibus
-          metus, pellentesque maximus orci laoreet vel. Etiam blandit non enim
-          et porta. Vivamus auctor id risus nec pellentesque. Cras pharetra
-          tempus magna, eu fermentum risus malesuada a. Sed ornare nisi ut
-          tortor cursus egestas. Sed pretium tincidunt enim, ac suscipit magna
-          facilisis ac. Sed tristique nisi suscipit, ultrices ante a, efficitur
-          arcu. Integer gravida purus vel felis ultrices, quis volutpat odio
-          dictum. Sed lectus nisl, pretium ac enim eget, efficitur tempus magna.
-          Pellentesque eleifend nulla nunc, quis bibendum sem volutpat eu. Etiam
-          non porta ante.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus
-          nisl, mollis at vulputate a, laoreet a elit. Nullam rutrum orci
-          sapien, sed consectetur purus faucibus in. Vivamus ipsum mauris,
-          ultrices in dignissim tempor, dictum vitae diam. Etiam a faucibus
-          diam, et eleifend nulla. Sed id elit nulla. Mauris eleifend finibus
-          metus, pellentesque maximus orci laoreet vel. Etiam blandit non enim
-          et porta. Vivamus auctor id risus nec pellentesque. Cras pharetra
-          tempus magna, eu fermentum risus malesuada a. Sed ornare nisi ut
-          tortor cursus egestas. Sed pretium tincidunt enim, ac suscipit magna
-          facilisis ac. Sed tristique nisi suscipit, ultrices ante a, efficitur
-          arcu. Integer gravida purus vel felis ultrices, quis volutpat odio
-          dictum. Sed lectus nisl, pretium ac enim eget, efficitur tempus magna.
-          Pellentesque eleifend nulla nunc, quis bibendum sem volutpat eu. Etiam
-          non porta ante.
-        </p>
       </section>
     </main>
     <footer></footer>
