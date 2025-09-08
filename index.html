@@ -147,15 +147,15 @@
       }
 
       /*
-      .accordion-item:focus {
-        margin-bottom: 2px;
-        outline: none;
-      }
+            .accordion-item:focus {
+              margin-bottom: 2px;
+              outline: none;
+            }
 
-      .accordion-button:focus {
-        color: red !important;
-      }
-      */
+            .accordion-button:focus {
+              color: red !important;
+            }
+            */
 
       /* Category Section Styles */
       .category-section {
@@ -332,6 +332,16 @@
       .footer-links {
         display: flex;
         justify-content: start;
+      }
+
+      #ig_frame {
+        border: none;
+        width: 336px;
+        height: 638px;
+        margin-bottom: -100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       /* Extra small devices (e.g., phones) */
@@ -584,10 +594,17 @@
       </section>
 
       <!-- IFRAME -->
-      <iframe
-        src="https://haditeguh.github.io/landing_page_batik/claude.html"
-        style="border: none; width: 336px; height: 638px"
-      ></iframe>
+      <section>
+        <div class="col text-center my-4">
+          <h2 class="title-border">Eksplor Tentang Kami</h2>
+        </div>
+        <div class="base-border">
+          <iframe
+            id="ig_frame"
+            src="https://haditeguh.github.io/landing_page_batik/ig_api.html"
+          ></iframe>
+        </div>
+      </section>
 
       <!-- DESKRIPSI -->
       <section id="deskripsi">
