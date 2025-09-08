@@ -146,17 +146,6 @@
         color: rgb(71, 76, 67) !important;
       }
 
-      /*
-            .accordion-item:focus {
-              margin-bottom: 2px;
-              outline: none;
-            }
-
-            .accordion-button:focus {
-              color: red !important;
-            }
-            */
-
       /* Category Section Styles */
       .category-section {
         margin-top: 0;
@@ -295,6 +284,19 @@
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
       }
 
+      .iframe-border {
+        display: inline-block;
+        border: 3px dashed rgb(203, 153, 126);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        padding-bottom: 97px;
+        padding-right: 8px;
+      }
+
+      .iframe-wrapper {
+        text-align: center;
+        rotate: -1deg;
+      }
+
       .deskripsi-img {
         width: 40vw;
         min-width: 300px;
@@ -344,6 +346,20 @@
         margin-right: auto;
       }
 
+      .ig-1,
+      .ig-2 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 375px) {
+        #ig_frame {
+          width: 300px;
+          height: 570px;
+        }
+      }
+
       /* Extra small devices (e.g., phones) */
       @media (max-width: 575.98px) {
         /* Styles for extra small screens */
@@ -380,6 +396,11 @@
         }
         .about-container {
           width: 97% !important;
+        }
+        .ig-1 {
+          flex: 0 0 100%;
+          max-width: 100%;
+          box-sizing: border-box;
         }
       }
 
@@ -425,6 +446,11 @@
         .about-container {
           width: 98% !important;
         }
+        .ig-1 {
+          flex: 0 0 100%;
+          max-width: 100%;
+          box-sizing: border-box;
+        }
       }
 
       /* Medium devices (e.g., landscape tablets, desktops) */
@@ -449,6 +475,16 @@
 
         .form-maps {
           width: 75%;
+        }
+
+        .ig-1 {
+          flex: 0 0 100%;
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+
+        .ig-2 {
+          display: none !important;
         }
       }
 
@@ -593,16 +629,36 @@
         </div>
       </section>
 
-      <!-- IFRAME -->
+      <!-- EMBED -->
       <section>
-        <div class="col text-center my-4">
+        <div class="text-center my-4">
           <h2 class="title-border">Eksplor Tentang Kami</h2>
         </div>
-        <div class="base-border">
-          <iframe
-            id="ig_frame"
-            src="https://haditeguh.github.io/landing_page_batik/ig_api.html"
-          ></iframe>
+        <div class="container-fluid">
+          <div class="row row-ig">
+            <!-- IG -->
+            <div class="ig-1">
+              <div class="iframe-wrapper">
+                <div class="iframe-border">
+                  <iframe
+                    id="ig_frame"
+                    src="https://haditeguh.github.io/landing_page_batik/ig.html"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- TIKTOK -->
+            <div class="ig-2 d-none d-md-block">
+              <div class="iframe-wrapper">
+                <div class="iframe-border">
+                  <iframe
+                    id="ig_frame"
+                    src="https://haditeguh.github.io/landing_page_batik/tiktok.html"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -610,7 +666,7 @@
       <section id="deskripsi">
         <div class="container-fluid">
           <div class="row">
-            <div class="col text-center my-4">
+            <div class="text-center my-4">
               <h2 class="title-border">Corak Keindahan Budaya</h2>
             </div>
           </div>
