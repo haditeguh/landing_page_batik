@@ -54,10 +54,17 @@
         color: rgb(183, 183, 164) !important;
       }
 
+      section {
+        margin: 100px 0;
+        scroll-margin-top: 100px;
+      }
+
       #banner {
+        margin: 0 !important;
         position: relative;
         width: 100%;
         overflow: hidden;
+        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
       }
 
       .img-banner {
@@ -95,6 +102,11 @@
         height: 100vh;
       }
 
+      nav.navbar {
+        border-bottom: 3px dashed rgb(203, 153, 126);
+        box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+      }
+
       .navbar-collapse {
         transition: height 0.1s linear;
       }
@@ -110,13 +122,39 @@
 
       .parallax {
         background-image:
-          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+          linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
           url("./assets/img3.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
       }
+
+      .border-content {
+        padding: 20px;
+      }
+
+      .accordion-button:focus {
+        box-shadow: 2px 2px rgb(203, 153, 126);
+        color: rgb(203, 153, 126) !important;
+        outline: none;
+      }
+
+      .accordion-button.collapsed {
+        box-shadow: none;
+        color: rgb(71, 76, 67) !important;
+      }
+
+      /*
+      .accordion-item:focus {
+        margin-bottom: 2px;
+        outline: none;
+      }
+
+      .accordion-button:focus {
+        color: red !important;
+      }
+      */
 
       /* Category Section Styles */
       .category-section {
@@ -128,55 +166,69 @@
         height: 100vh;
       }
 
-      .category-container {
+      .category-container,
+      .unggulan-container {
         position: relative;
         width: 100%;
         height: 100%;
         overflow: hidden;
       }
 
-      .category-image {
+      .category-image,
+      .unggulan-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s ease;
       }
 
-      .category-overlay {
+      .category-overlay,
+      .unggulan-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
         display: flex;
         align-items: flex-end;
         justify-content: center;
         transition: background 0.3s ease;
       }
 
-      .category-content {
+      .category-overlay-bg {
+        background: rgba(0, 0, 0, 0.4);
+      }
+
+      .unggulan-overlay-bg {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .category-content,
+      .unggulan-content {
         text-align: center;
         color: white;
         padding: 1rem;
         margin-bottom: 2rem;
       }
 
-      .category-title {
+      .category-title,
+      .unggulan-title {
         font-size: 2rem;
         margin-bottom: 1rem;
         letter-spacing: 3px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
-      .category-description {
+      .category-description,
+      .unggulan-description {
         font-size: 1rem;
         margin-bottom: 2rem;
         opacity: 0.9;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
       }
 
-      .category-btn {
+      .category-btn,
+      .unggulan-btn {
         padding: 10px 25px;
         font-size: 1rem;
         font-weight: 500;
@@ -186,7 +238,8 @@
         letter-spacing: 1px;
       }
 
-      .category-btn:hover {
+      .category-btn:hover,
+      .unggulan-btn:hover {
         background-color: white;
         color: #333;
         transform: translateY(-2px);
@@ -205,6 +258,81 @@
         padding: 0 2rem;
       }
 
+      .title-border {
+        border-style: double none;
+        margin-bottom: 2rem;
+        padding: 5px 15px;
+        display: inline-block;
+      }
+
+      hr {
+        margin: 2rem auto;
+        width: 50px;
+        border-top: 3px dashed #ccc;
+      }
+
+      .maps-style {
+        width: 100%;
+        rotate: -2deg;
+      }
+
+      .about-container {
+        height: 50vh;
+        width: 99%;
+      }
+
+      .ulasan-container {
+        width: 70%;
+      }
+
+      .pertanyaan-container {
+        width: 70%;
+      }
+
+      .base-border {
+        border: 3px dashed rgb(203, 153, 126);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .deskripsi-img {
+        width: 40vw;
+        min-width: 300px;
+        transform: rotate(-2deg);
+      }
+
+      .btn-form {
+        background-color: rgb(203, 153, 126) !important;
+        border: 3px dashed rgb(255, 232, 214);
+      }
+
+      .btn-form:hover {
+        background-color: rgb(255, 232, 214) !important;
+        border: 3px dashed rgb(203, 153, 126);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+      }
+
+      input,
+      textarea {
+        background-color: rgb(255, 232, 214) !important;
+        border: 2px solid rgb(183, 183, 164) !important;
+      }
+
+      input:focus,
+      textarea:focus {
+        box-shadow: 3px 3px rgb(203, 153, 126) !important;
+        outline: none !important;
+      }
+
+      .list-unstyled li a {
+        color: rgb(33, 36, 41);
+        text-decoration: none;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: start;
+      }
+
       /* Extra small devices (e.g., phones) */
       @media (max-width: 575.98px) {
         /* Styles for extra small screens */
@@ -218,6 +346,29 @@
 
         .category-title {
           font-size: 1.8rem;
+        }
+
+        .ulasan-container {
+          width: 100% !important;
+        }
+
+        .pertanyaan-container {
+          width: 95% !important;
+        }
+
+        .deskripsi-img {
+          width: 85vw;
+          height: auto;
+        }
+
+        .deskripsi-text p {
+          width: 75vw;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+        }
+        .about-container {
+          width: 97% !important;
         }
       }
 
@@ -244,6 +395,25 @@
         .category-content {
           padding: 1.5rem;
         }
+
+        .pertanyaan-container {
+          width: 98% !important;
+        }
+
+        .deskripsi-img {
+          width: 85vw;
+          height: auto;
+        }
+
+        .deskripsi-text p {
+          width: 90vw;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+        }
+        .about-container {
+          width: 98% !important;
+        }
       }
 
       /* Medium devices (e.g., landscape tablets, desktops) */
@@ -261,20 +431,35 @@
         .category-description {
           font-size: 1.1rem;
         }
+
+        .deskripsi-text p {
+          margin-left: -10%;
+        }
+
+        .form-maps {
+          width: 75%;
+        }
       }
 
       /* Large devices (e.g., desktops) */
       @media (min-width: 992px) and (max-width: 1199.98px) {
         /* Styles for large screens */
+        .deskripsi-text p {
+          margin-left: -10%;
+        }
       }
 
       /* Extra large devices (e.g., large desktops) */
       @media (min-width: 1200px) {
         /* Styles for extra large screens */
+
+        .deskripsi-text p {
+          margin-left: -10%;
+        }
       }
     </style>
   </head>
-  <body class="vend">
+  <body class="mybg-white vend">
     <header>
       <nav
         class="navbar navbar-light navbar-expand-lg nav fixed-top mybg-white"
@@ -397,10 +582,85 @@
         </div>
       </section>
 
+      <!-- DESKRIPSI -->
+      <section id="deskripsi">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col text-center my-4">
+              <h2 class="title-border">Corak Keindahan Budaya</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col-12 col-md-6 text-center d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="./assets/img3.jpg"
+                alt="batik"
+                class="deskripsi-img base-border"
+              />
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+              <div class="deskripsi-container container-fluid">
+                <div class="deskripsi-content text-start">
+                  <div class="deskripsi-text myfg-dark mt-4">
+                    <p class="px-1 fs-5">
+                      Batik bukan hanya pakaian, tapi kisah yang terlukis di
+                      setiap helai kain. Setiap motif menyimpan makna, doa, dan
+                      harapan dari budaya yang diwariskan turun-temurun. Kami
+                      percaya, batik bukan hanya busana, tetapi juga cara untuk
+                      merasakan kedekatan dengan akar tradisi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Produk Unggulan-->
+      <section id="unggulan" class="category-section">
+        <div class="container-fluid p-0">
+          <div class="text-center my-4">
+            <h2 class="title-border">Paling Banyak Dicari</h2>
+          </div>
+          <div class="row g-1 mx-1">
+            <!-- Category 1 -->
+            <div class="col category-item">
+              <div class="unggulan-container">
+                <img
+                  src="./assets/pria.jpg"
+                  alt="Men Batik Collection"
+                  class="unggulan-image"
+                />
+                <div class="unggulan-overlay unggulan-overlay-bg">
+                  <div class="unggulan-content">
+                    <h2 class="unggulan-title">Produk Unggulan</h2>
+                    <p class="unggulan-description">
+                      Koleksi produk unggulan kami
+                    </p>
+                    <a
+                      class="btn btn-outline-light unggulan-btn"
+                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
+                      target="_blank"
+                    >
+                      Lihat Koleksi
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- KATEGORI -->
       <section id="kategori" class="category-section">
-        <div class="container-fluid p-0 my-1">
-          <div class="row g-1">
+        <div class="container-fluid p-0">
+          <div class="text-center my-4">
+            <h2 class="title-border">Jelajahi Gaya Batikmu</h2>
+          </div>
+          <div class="row g-1 mx-1">
             <!-- Category 1 -->
             <div class="col-lg-6 col-12 category-item">
               <div class="category-container">
@@ -409,7 +669,7 @@
                   alt="Men Batik Collection"
                   class="category-image"
                 />
-                <div class="category-overlay">
+                <div class="category-overlay category-overlay-bg">
                   <div class="category-content">
                     <h2 class="category-title">PRIA</h2>
                     <p class="category-description">
@@ -435,7 +695,7 @@
                   alt="Women Batik Collection"
                   class="category-image"
                 />
-                <div class="category-overlay">
+                <div class="category-overlay category-overlay-bg">
                   <div class="category-content">
                     <h2 class="category-title">WANITA</h2>
                     <p class="category-description">
@@ -461,7 +721,7 @@
                   alt="Kids Batik Collection"
                   class="category-image"
                 />
-                <div class="category-overlay">
+                <div class="category-overlay category-overlay-bg">
                   <div class="category-content">
                     <h2 class="category-title">ANAK-ANAK</h2>
                     <p class="category-description">
@@ -487,7 +747,7 @@
                   alt="Batik Accessories Collection"
                   class="category-image"
                 />
-                <div class="category-overlay">
+                <div class="category-overlay category-overlay-bg">
                   <div class="category-content">
                     <h2 class="category-title">AKSESORIS</h2>
                     <p class="category-description">
@@ -510,16 +770,15 @@
 
       <!-- TENTANG -->
       <section id="tentang">
-        <div
-          class="about-container container-fluid parallax"
-          style="height: 50vh"
-        >
+        <div class="text-center my-4">
+          <h2 class="title-border">Kami dan Batik</h2>
+        </div>
+        <div class="about-container container-fluid parallax">
           <div
-            class="about-content d-flex justify-content-center align-items-center h-100 mx-auto text-center"
+            class="d-flex justify-content-center align-items-center h-100 mx-auto text-center"
             style="width: 80%"
           >
             <div class="myfg-white">
-              <h2 class="mb-3">Tentang Kami</h2>
               <p class="px-1 px-md-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 tellus nisl, momlllis at vulputate a, laoreet a elit. Nullam
@@ -530,43 +789,342 @@
           </div>
         </div>
       </section>
-      <section id="ulasan">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus
-          nisl, mollis at vulputate a, laoreet a elit. Nullam rutrum orci
-          sapien, sed consectetur purus faucibus in. Vivamus ipsum mauris,
-          ultrices in dignissim tempor, dictum vitae diam. Etiam a faucibus
-          diam, et eleifend nulla. Sed id elit nulla. Mauris eleifend finibus
-          metus, pellentesque maximus orci laoreet vel. Etiam blandit non enim
-          et porta. Vivamus auctor id risus nec pellentesque. Cras pharetra
-          tempus magna, eu fermentum risus malesuada a. Sed ornare nisi ut
-          tortor cursus egestas. Sed pretium tincidunt enim, ac suscipit magna
-          facilisis ac. Sed tristique nisi suscipit, ultrices ante a, efficitur
-          arcu. Integer gravida purus vel felis ultrices, quis volutpat odio
-          dictum. Sed lectus nisl, pretium ac enim eget, efficitur tempus magna.
-          Pellentesque eleifend nulla nunc, quis bibendum sem volutpat eu. Etiam
-          non porta ante.
-        </p>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tellus
-          nisl, mollis at vulputate a, laoreet a elit. Nullam rutrum orci
-          sapien, sed consectetur purus faucibus in. Vivamus ipsum mauris,
-          ultrices in dignissim tempor, dictum vitae diam. Etiam a faucibus
-          diam, et eleifend nulla. Sed id elit nulla. Mauris eleifend finibus
-          metus, pellentesque maximus orci laoreet vel. Etiam blandit non enim
-          et porta. Vivamus auctor id risus nec pellentesque. Cras pharetra
-          tempus magna, eu fermentum risus malesuada a. Sed ornare nisi ut
-          tortor cursus egestas. Sed pretium tincidunt enim, ac suscipit magna
-          facilisis ac. Sed tristique nisi suscipit, ultrices ante a, efficitur
-          arcu. Integer gravida purus vel felis ultrices, quis volutpat odio
-          dictum. Sed lectus nisl, pretium ac enim eget, efficitur tempus magna.
-          Pellentesque eleifend nulla nunc, quis bibendum sem volutpat eu. Etiam
-          non porta ante.
-        </p>
+      <!-- ULASAN -->
+      <section id="ulasan">
+        <div class="ulasan-container container mybg-white">
+          <div class="text-center my-4">
+            <h2 class="title-border">Kepercayaan Pelanggan</h2>
+          </div>
+          <div
+            id="carouselControls"
+            class="border-content base-border carousel carousel-dark slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner mx-auto" style="width: 70%">
+              <div class="carousel-item active text-center">
+                <p class="fs-5">
+                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
+                  ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
+                  dolor sit amet
+                </p>
+                <hr />
+                <p class="fs-4">Diana</p>
+              </div>
+              <div class="carousel-item text-center">
+                <p class="fs-5">
+                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
+                  ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
+                  dolor sit amet
+                </p>
+                <hr />
+                <p class="fs-4">Fransiska</p>
+              </div>
+              <div class="carousel-item text-center">
+                <p class="fs-5">
+                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
+                  ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
+                  dolor sit amet
+                </p>
+                <hr />
+                <p class="fs-4">Roberta</p>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
       </section>
+
+      <!-- PERTANYAAN -->
+      <section id="pertanyaan">
+        <div class="text-center my-4">
+          <h2 class="title-border">Pertanyaan Umum</h2>
+        </div>
+        <div
+          class="pertanyaan-container container border-content base-border my-4"
+        >
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Mengapa batik itu penting?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body mybg-white myfg-dark">
+                  Batik adalah warisan budaya Indonesia yang kaya dan unik.
+                  Memakai batik tidak hanya menunjukkan rasa bangga terhadap
+                  budaya Indonesia, tetapi juga mendukung para pengrajin lokal.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body mybg-white myfg-dark">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the second item's accordion body. Let's imagine this being
+                  filled with some actual content.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body mybg-white myfg-dark">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the
+                  space to make it look, at least at first glance, a bit more
+                  representative of how this would look in a real-world
+                  application.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORM & PETA -->
+      <section id="formMaps">
+        <div class="container-fluid">
+          <div class="row d-flex flex-column flex-md-row mx-3 g-5">
+            <!-- Left -->
+            <div class="form-maps col-12 col-lg-6 align-self-center mx-auto">
+              <div class="text-center my-4">
+                <h2 class="title-border">Sampaikan Pesan</h2>
+              </div>
+              <label for="nama" class="form-label">Nama: </label>
+              <input
+                id="nama"
+                class="form-control mb-2"
+                type="text"
+                placeholder="Nama Kamu"
+                aria-label="nama"
+              />
+              <label for="email" class="form-label">Email: </label>
+              <input
+                type="email"
+                class="form-control mb-2"
+                id="email"
+                placeholder="nama@mail.com"
+                autocomplete="email"
+              />
+              <label for="text" class="form-label">Pesan: </label>
+              <textarea
+                class="form-control mb-2"
+                id="text"
+                placeholder="Tulis pesanmu disini."
+                rows="3"
+              ></textarea>
+
+              <div class="row">
+                <div class="col text-start mt-4">
+                  <button
+                    type="button"
+                    class="btn-form btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal_id"
+                  >
+                    Kirim Pesan
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right -->
+            <div class="form-maps col-12 col-lg-6 align-self-center mx-auto">
+              <div class="text-center my-4">
+                <h2 class="title-border">Temukan Kami</h2>
+              </div>
+              <div class="overflow-hidden maps-style base-border">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3957.244037911579!2d110.33759599999999!3d-7.326464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMTknMzUuMyJTIDExMMKwMjAnMTUuNCJF!5e0!3m2!1sid!2sid!4v1755585148516!5m2!1sid!2sid"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal Component -->
+      <div
+        id="modal_id"
+        class="modal"
+        tabindex="-1"
+        aria-labelledby="modal_label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title myfg-dark">Pesanmu Terkirim!</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <!-- FOOTER -->
+    <footer
+      class="mybg-brown pt-5 pb-5"
+      style="border-top: 5px dashed rgb(255, 232, 214)"
+    >
+      <div class="container px-5 px-md-3">
+        <div class="row">
+          <!-- Navigasi -->
+          <div class="footer-links col-12 col-md-3 col-lg-3 mb-3">
+            <div>
+              <h5>Navigasi</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#banner">Home</a>
+                </li>
+                <li>
+                  <a href="#kategori">Kategori</a>
+                </li>
+                <li>
+                  <a href="#pertanyaan">Pertanyaan</a>
+                </li>
+                <li>
+                  <a href="#ulasan">Ulasan</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Sosmed -->
+          <div class="footer-links col-12 col-md-3 col-lg-3 mb-3">
+            <div>
+              <h5>Sosmed</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">Instagram</a>
+                </li>
+                <li>
+                  <a href="#">Facebook</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Olshop -->
+          <div class="footer-links col-12 col-md-2 col-lg-3 mb-3">
+            <div>
+              <h5>Olshop</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">Tokopedia</a>
+                </li>
+                <li>
+                  <a href="#">Shopee</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Kontak -->
+          <div class="footer-links col-12 col-md-4 col-lg-3 mb-3">
+            <div>
+              <h5>Kontak</h5>
+              <p>
+                WhatsApp: 0877-3678-2867
+                <br />
+                <br />
+                Alamat: RT.13/RW.5, Losari, Kec. Grabag, Kabupaten Magelang,
+                Jawa Tengah.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="text-center border-top pt-4 mt-2">
+          <small>&copy; 2025 Batik XYZ. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
