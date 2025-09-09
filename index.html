@@ -236,7 +236,8 @@
       }
 
       /* Hover Effects */
-      .category-container:hover .category-image {
+      .category-container:hover .category-image,
+      .unggulan-container:hover .unggulan-image {
         transform: scale(1.05);
       }
 
@@ -263,7 +264,11 @@
 
       .maps-style {
         width: 100%;
-        rotate: -2deg;
+        rotate: 2deg;
+      }
+
+      .btn-form {
+        rotate: -5deg;
       }
 
       .about-container {
@@ -288,13 +293,29 @@
         display: inline-block;
         border: 3px dashed rgb(203, 153, 126);
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .iframe-border-ig {
         padding-bottom: 97px;
         padding-right: 8px;
       }
 
-      .iframe-wrapper {
+      .iframe-border-tiktok {
+        padding-bottom: 90px;
+      }
+
+      .iframe-wrapper-ig {
         text-align: center;
         rotate: -1deg;
+      }
+
+      .iframe-wrapper-tiktok {
+        text-align: center;
+        rotate: 1deg;
+      }
+
+      .ig-wrapper {
+        margin-left: -15%;
       }
 
       .deskripsi-img {
@@ -336,27 +357,46 @@
         justify-content: start;
       }
 
-      #ig_frame {
+      /*
+      .frame {
         border: none;
-        width: 336px;
-        height: 638px;
-        margin-bottom: -100px;
         display: block;
         margin-left: auto;
         margin-right: auto;
       }
+*/
 
+      #ig_frame {
+        width: 336px;
+        height: 638px;
+        margin-bottom: -100px;
+      }
+
+      #tiktok_frame {
+        width: 450px;
+        height: 533px;
+        margin-bottom: -100px;
+      }
+      /*
       .ig-1,
       .ig-2 {
         flex: 0 0 50%;
         max-width: 50%;
         box-sizing: border-box;
       }
+*/
 
       @media (max-width: 375px) {
         #ig_frame {
           width: 300px;
           height: 570px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .ig-wrapper {
+          margin-left: auto;
+          margin-bottom: 60px;
         }
       }
 
@@ -397,11 +437,18 @@
         .about-container {
           width: 97% !important;
         }
+
+        #tiktok_frame {
+          width: 320px;
+          height: 430px;
+        }
+        /*
         .ig-1 {
           flex: 0 0 100%;
           max-width: 100%;
           box-sizing: border-box;
         }
+*/
       }
 
       /* Small devices (e.g., portrait tablets, large phones) */
@@ -446,11 +493,16 @@
         .about-container {
           width: 98% !important;
         }
-        .ig-1 {
+
+        /*
+        .ig-1,
+        .ig-2 {
           flex: 0 0 100%;
           max-width: 100%;
           box-sizing: border-box;
+          margin: 20px 0;
         }
+*/
       }
 
       /* Medium devices (e.g., landscape tablets, desktops) */
@@ -477,15 +529,22 @@
           width: 75%;
         }
 
-        .ig-1 {
+        .embed {
           flex: 0 0 100%;
           max-width: 100%;
           box-sizing: border-box;
         }
 
+        .ig-wrapper {
+          margin-left: auto;
+          margin-bottom: 60px;
+        }
+
+        /*
         .ig-2 {
           display: none !important;
         }
+*/
       }
 
       /* Large devices (e.g., desktops) */
@@ -629,39 +688,6 @@
         </div>
       </section>
 
-      <!-- EMBED -->
-      <section>
-        <div class="text-center my-4">
-          <h2 class="title-border">Eksplor Tentang Kami</h2>
-        </div>
-        <div class="container-fluid">
-          <div class="row row-ig">
-            <!-- IG -->
-            <div class="ig-1">
-              <div class="iframe-wrapper">
-                <div class="iframe-border">
-                  <iframe
-                    id="ig_frame"
-                    src="https://haditeguh.github.io/landing_page_batik/ig.html"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <!-- TIKTOK -->
-            <div class="ig-2 d-none d-md-block">
-              <div class="iframe-wrapper">
-                <div class="iframe-border">
-                  <iframe
-                    id="ig_frame"
-                    src="https://haditeguh.github.io/landing_page_batik/tiktok.html"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- DESKRIPSI -->
       <section id="deskripsi">
         <div class="container-fluid">
@@ -683,7 +709,7 @@
             <div class="col-12 col-md-6 d-flex align-items-center">
               <div class="deskripsi-container container-fluid">
                 <div class="deskripsi-content text-start">
-                  <div class="deskripsi-text myfg-dark mt-4">
+                  <div class="deskripsi-text myfg-dark mt-4 mt-lg-0">
                     <p class="px-1 fs-5">
                       Batik bukan hanya pakaian, tapi kisah yang terlukis di
                       setiap helai kain. Setiap motif menyimpan makna, doa, dan
@@ -705,26 +731,47 @@
             <h2 class="title-border">Paling Banyak Dicari</h2>
           </div>
           <div class="row g-1 mx-1">
-            <!-- Category 1 -->
+            <!-- Unggulan Pria -->
             <div class="col category-item">
               <div class="unggulan-container">
                 <img
                   src="https://haditeguh.github.io/landing_page_batik/assets/pria.jpg"
+                  data-hover-src="./assets/unggulan-pria.jpg"
                   alt="Men Batik Collection"
                   class="unggulan-image"
                 />
                 <div class="unggulan-overlay unggulan-overlay-bg">
                   <div class="unggulan-content">
-                    <h2 class="unggulan-title">Produk Unggulan</h2>
-                    <p class="unggulan-description">
-                      Koleksi produk unggulan kami
-                    </p>
+                    <h2 class="unggulan-title">Batik Pria Terlaris</h2>
                     <a
                       class="btn btn-outline-light unggulan-btn"
                       href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
                       target="_blank"
                     >
-                      Lihat Koleksi
+                      Lihat Produk
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Unggulan Wanita -->
+            <div class="col category-item">
+              <div class="unggulan-container">
+                <img
+                  src="https://haditeguh.github.io/landing_page_batik/assets/wanita.jpg"
+                  data-hover-src="./assets/unggulan-wanita.jpg"
+                  alt="Men Batik Collection"
+                  class="unggulan-image"
+                />
+                <div class="unggulan-overlay unggulan-overlay-bg">
+                  <div class="unggulan-content">
+                    <h2 class="unggulan-title">Batik Wanita Terlaris</h2>
+                    <a
+                      class="btn btn-outline-light unggulan-btn"
+                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
+                      target="_blank"
+                    >
+                      Lihat Produk
                     </a>
                   </div>
                 </div>
@@ -1034,6 +1081,39 @@
         </div>
       </section>
 
+      <!-- EMBED -->
+      <section>
+        <div class="text-center my-4">
+          <h2 class="title-border">Eksplor Tentang Kami</h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <!-- IG -->
+            <div class="col-12 col-md-6 embed">
+              <div class="iframe-wrapper-ig ig-wrapper">
+                <div class="iframe-border iframe-border-ig">
+                  <iframe
+                    id="ig_frame"
+                    src="https://haditeguh.github.io/landing_page_batik/ig.html"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- TIKTOK -->
+            <div class="col-12 col-md-6 embed">
+              <div class="iframe-wrapper-tiktok mx-auto">
+                <div class="iframe-border iframe-border-tiktok">
+                  <iframe
+                    id="tiktok_frame"
+                    src="https://haditeguh.github.io/landing_page_batik/tiktok.html"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- FORM & PETA -->
       <section id="formMaps">
         <div class="container-fluid">
@@ -1223,6 +1303,23 @@
               });
               bsCollapse.hide();
             }
+          });
+        });
+
+      document
+        .querySelectorAll(".unggulan-container")
+        .forEach(function (container) {
+          const img = container.querySelector(".unggulan-image");
+          const originalSrc = img.src;
+          const hoverSrc = img.getAttribute("data-hover-src"); // dummy image
+
+          container.addEventListener("mouseenter", function () {
+            if (hoverSrc) {
+              img.src = hoverSrc;
+            }
+          });
+          container.addEventListener("mouseleave", function () {
+            img.src = originalSrc;
           });
         });
     </script>
