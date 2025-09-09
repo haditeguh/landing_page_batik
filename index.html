@@ -30,6 +30,10 @@
         background-color: rgb(255, 232, 214) !important;
       }
 
+      p {
+        font-size: 1.2rem;
+      }
+
       .mybg-dark {
         background-color: rgb(71, 76, 67) !important;
       }
@@ -198,12 +202,10 @@
         text-align: center;
         color: white;
         padding: 1rem;
-        margin-bottom: 2rem;
       }
 
       .category-title,
       .unggulan-title {
-        font-size: 2rem;
         margin-bottom: 1rem;
         letter-spacing: 3px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -212,19 +214,18 @@
       .category-description,
       .unggulan-description {
         font-size: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         opacity: 0.9;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
       }
 
       .category-btn,
       .unggulan-btn {
-        padding: 10px 25px;
+        padding: 5px 15px;
         font-size: 1rem;
         font-weight: 500;
         border: 2px solid white;
         transition: all 0.3s ease;
-        text-transform: uppercase;
         letter-spacing: 1px;
       }
 
@@ -258,8 +259,8 @@
 
       hr {
         margin: 2rem auto;
-        width: 50px;
-        border-top: 3px dashed #ccc;
+        width: 100px;
+        border-top: 3px dashed black;
       }
 
       .maps-style {
@@ -358,13 +359,13 @@
       }
 
       /*
-      .frame {
-        border: none;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-*/
+            .frame {
+              border: none;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            }
+      */
 
       #ig_frame {
         width: 336px;
@@ -378,13 +379,13 @@
         margin-bottom: -100px;
       }
       /*
-      .ig-1,
-      .ig-2 {
-        flex: 0 0 50%;
-        max-width: 50%;
-        box-sizing: border-box;
-      }
-*/
+            .ig-1,
+            .ig-2 {
+              flex: 0 0 50%;
+              max-width: 50%;
+              box-sizing: border-box;
+            }
+      */
 
       @media (max-width: 375px) {
         #ig_frame {
@@ -442,13 +443,14 @@
           width: 320px;
           height: 430px;
         }
+
         /*
-        .ig-1 {
-          flex: 0 0 100%;
-          max-width: 100%;
-          box-sizing: border-box;
-        }
-*/
+              .ig-1 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+              }
+      */
       }
 
       /* Small devices (e.g., portrait tablets, large phones) */
@@ -462,17 +464,8 @@
           height: 60vh; /* Even shorter on mobile */
         }
 
-        .category-title {
-          font-size: 2rem;
-        }
-
         .category-description {
-          font-size: 1rem;
           margin-bottom: 1.5rem;
-        }
-
-        .category-content {
-          padding: 1.5rem;
         }
 
         .pertanyaan-container {
@@ -495,14 +488,14 @@
         }
 
         /*
-        .ig-1,
-        .ig-2 {
-          flex: 0 0 100%;
-          max-width: 100%;
-          box-sizing: border-box;
-          margin: 20px 0;
-        }
-*/
+              .ig-1,
+              .ig-2 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                margin: 20px 0;
+              }
+      */
       }
 
       /* Medium devices (e.g., landscape tablets, desktops) */
@@ -541,10 +534,10 @@
         }
 
         /*
-        .ig-2 {
-          display: none !important;
-        }
-*/
+              .ig-2 {
+                display: none !important;
+              }
+      */
       }
 
       /* Large devices (e.g., desktops) */
@@ -693,7 +686,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="text-center my-4">
-              <h2 class="title-border">Corak Keindahan Budaya</h2>
+              <h2 class="title-border fs-2">Corak Keindahan Budaya</h2>
             </div>
           </div>
           <div class="row">
@@ -710,7 +703,7 @@
               <div class="deskripsi-container container-fluid">
                 <div class="deskripsi-content text-start">
                   <div class="deskripsi-text myfg-dark mt-4 mt-lg-0">
-                    <p class="px-1 fs-5">
+                    <p class="px-1">
                       Batik bukan hanya pakaian, tapi kisah yang terlukis di
                       setiap helai kain. Setiap motif menyimpan makna, doa, dan
                       harapan dari budaya yang diwariskan turun-temurun. Kami
@@ -728,7 +721,7 @@
       <section id="unggulan" class="category-section">
         <div class="container-fluid p-0">
           <div class="text-center my-4">
-            <h2 class="title-border">Paling Banyak Dicari</h2>
+            <h2 class="title-border fs-2">Paling Banyak Dicari</h2>
           </div>
           <div class="row g-1 mx-1">
             <!-- Unggulan Pria -->
@@ -742,11 +735,11 @@
                 />
                 <div class="unggulan-overlay unggulan-overlay-bg">
                   <div class="unggulan-content">
-                    <h2 class="unggulan-title">Batik Pria Terlaris</h2>
+                    <h2 class="unggulan-title fs-2">TERLARIS PRIA</h2>
                     <a
-                      class="btn btn-outline-light unggulan-btn"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
+                      class="btn btn-outline-light unggulan-btn mb-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalPria"
                     >
                       Lihat Produk
                     </a>
@@ -765,11 +758,11 @@
                 />
                 <div class="unggulan-overlay unggulan-overlay-bg">
                   <div class="unggulan-content">
-                    <h2 class="unggulan-title">Batik Wanita Terlaris</h2>
+                    <h2 class="unggulan-title fs-2">TERLARIS WANITA</h2>
                     <a
-                      class="btn btn-outline-light unggulan-btn"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
+                      class="btn btn-outline-light unggulan-btn mb-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalWanita"
                     >
                       Lihat Produk
                     </a>
@@ -780,6 +773,127 @@
           </div>
         </div>
       </section>
+
+      <!-- MODAL COMPONENT -->
+      <div id="modalPria" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header mybg-dark text-white">
+              <h4 class="modal-title">Batik Unggulan Pria</h4>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body mybg-muted">
+              <p class="fs-4">Baju Batik ASDF</p>
+              <img
+                src="https://haditeguh.github.io/landing_page_batik/assets/unggulan-pria.jpg"
+                width="50%"
+                style="
+                  display: block;
+                  margin: 0 auto;
+                  rotate: 2deg;
+                  border: 3px dashed white;
+                  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                "
+              />
+              <p class="mt-3 fs-6">
+                Batik pria unggulan kami dirancang dengan motif klasik bernuansa
+                modern, memberi kesan elegan di setiap kesempatan.
+              </p>
+              <hr />
+              <p>Dapatkan di:</p>
+              <!-- tokopedia button -->
+              <div class="d-flex flex-column">
+                <button type="button" class="btn base-border mybg-white mb-3">
+                  <a
+                    href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
+                    target="_blank"
+                    style="
+                      display: block;
+                      align-items: center;
+                      text-decoration: none;
+                    "
+                  >
+                    <img
+                      src="./assets/tokopedia.png"
+                      alt="Logo"
+                      style="height: 32px"
+                    />
+                    <span class="text-dark" style="font-size: 1.2rem"
+                      >Tokopedia</span
+                    >
+                  </a>
+                </button>
+
+                <!-- shopee button -->
+                <button type="button" class="btn base-border mybg-white mb-3">
+                  <a
+                    href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
+                    target="_blank"
+                    style="
+                      display: block;
+                      align-items: center;
+                      text-decoration: none;
+                    "
+                  >
+                    <img
+                      src="./assets/shopee.png"
+                      alt="Logo"
+                      style="height: 32px"
+                    />
+                    <span class="text-dark" style="font-size: 1.2rem"
+                      >Shopee</span
+                    >
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div class="modal-footer mybg-dark myfg-white">
+              <button
+                type="button"
+                class="btn mybg-brown"
+                data-bs-dismiss="modal"
+              >
+                Tutup Jendela
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modalWanita" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- KATEGORI -->
       <section id="kategori" class="category-section">
@@ -798,12 +912,12 @@
                 />
                 <div class="category-overlay category-overlay-bg">
                   <div class="category-content">
-                    <h2 class="category-title">PRIA</h2>
+                    <h2 class="category-title fs-2">PRIA</h2>
                     <p class="category-description">
                       Koleksi batik pria modern dan elegan
                     </p>
                     <a
-                      class="btn btn-outline-light category-btn"
+                      class="btn btn-outline-light category-btn mb-2"
                       href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
                       target="_blank"
                     >
@@ -824,12 +938,12 @@
                 />
                 <div class="category-overlay category-overlay-bg">
                   <div class="category-content">
-                    <h2 class="category-title">WANITA</h2>
+                    <h2 class="category-title fs-2">WANITA</h2>
                     <p class="category-description">
                       Koleksi batik wanita yang memukau
                     </p>
                     <a
-                      class="btn btn-outline-light category-btn"
+                      class="btn btn-outline-light category-btn mb-2"
                       href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
                       target="_blank"
                     >
@@ -850,12 +964,12 @@
                 />
                 <div class="category-overlay category-overlay-bg">
                   <div class="category-content">
-                    <h2 class="category-title">ANAK-ANAK</h2>
+                    <h2 class="category-title fs-2">ANAK-ANAK</h2>
                     <p class="category-description">
                       Batik lucu untuk si kecil
                     </p>
                     <a
-                      class="btn btn-outline-light category-btn"
+                      class="btn btn-outline-light category-btn mb-2"
                       href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
                       target="_blank"
                     >
@@ -876,12 +990,12 @@
                 />
                 <div class="category-overlay category-overlay-bg">
                   <div class="category-content">
-                    <h2 class="category-title">AKSESORIS</h2>
+                    <h2 class="category-title fs-2">AKSESORIS</h2>
                     <p class="category-description">
                       Aksesoris batik untuk melengkapi gaya
                     </p>
                     <a
-                      class="btn btn-outline-light category-btn"
+                      class="btn btn-outline-light category-btn mb-2"
                       href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
                       target="_blank"
                     >
@@ -897,7 +1011,7 @@
 
       <!-- TENTANG -->
       <section id="tentang">
-        <div class="text-center my-4">
+        <div class="text-center my-4 fs-2">
           <h2 class="title-border">Kami dan Batik</h2>
         </div>
         <div class="about-container container-fluid parallax">
@@ -930,7 +1044,7 @@
           >
             <div class="carousel-inner mx-auto" style="width: 70%">
               <div class="carousel-item active text-center">
-                <p class="fs-5">
+                <p>
                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
                   ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
                   dolor sit amet
@@ -939,7 +1053,7 @@
                 <p class="fs-4">Diana</p>
               </div>
               <div class="carousel-item text-center">
-                <p class="fs-5">
+                <p>
                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
                   ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
                   dolor sit amet
@@ -948,7 +1062,7 @@
                 <p class="fs-4">Fransiska</p>
               </div>
               <div class="carousel-item text-center">
-                <p class="fs-5">
+                <p>
                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem
                   ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum
                   dolor sit amet
@@ -1118,11 +1232,11 @@
       </section>
 
       <!-- FORM & PETA -->
-      <section id="formMaps">
+      <section id="formMaps" style="margin-top: -75px">
         <div class="container-fluid">
           <div class="row d-flex flex-column flex-md-row mx-3 g-5">
             <!-- Left -->
-            <div class="form-maps col-12 col-lg-6 align-self-center mx-auto">
+            <div class="form-maps col-12 col-lg-6 mx-auto">
               <div class="text-center my-4">
                 <h2 class="title-border">Sampaikan Pesan</h2>
               </div>
