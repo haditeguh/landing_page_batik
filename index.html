@@ -135,6 +135,17 @@
         background-size: cover;
       }
 
+      .parallax2 {
+        background-image:
+          linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+          url("./assets/background.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+
       .border-content {
         padding: 20px;
       }
@@ -269,7 +280,7 @@
       }
 
       .btn-form {
-        rotate: -5deg;
+        rotate: -2deg;
       }
 
       .about-container {
@@ -362,15 +373,6 @@
         justify-content: start;
       }
 
-      /*
-            .frame {
-              border: none;
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-            }
-      */
-
       #ig_frame {
         width: 336px;
         height: 638px;
@@ -386,19 +388,14 @@
       .btn-modal:hover {
         rotate: -2deg;
       }
-      /*
-            .ig-1,
-            .ig-2 {
-              flex: 0 0 50%;
-              max-width: 50%;
-              box-sizing: border-box;
-            }
-      */
 
       @media (max-width: 375px) {
         #ig_frame {
           width: 300px;
           height: 570px;
+        }
+        .after-banner-img {
+          opacity: 0.01;
         }
       }
 
@@ -451,14 +448,6 @@
           width: 320px;
           height: 430px;
         }
-
-        /*
-              .ig-1 {
-                flex: 0 0 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-              }
-      */
       }
 
       /* Small devices (e.g., portrait tablets, large phones) */
@@ -494,16 +483,6 @@
         .about-container {
           width: 98% !important;
         }
-
-        /*
-              .ig-1,
-              .ig-2 {
-                flex: 0 0 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-                margin: 20px 0;
-              }
-      */
       }
 
       /* Medium devices (e.g., landscape tablets, desktops) */
@@ -540,12 +519,6 @@
           margin-left: auto;
           margin-bottom: 60px;
         }
-
-        /*
-              .ig-2 {
-                display: none !important;
-              }
-      */
       }
 
       /* Large devices (e.g., desktops) */
@@ -689,6 +662,102 @@
         </div>
       </section>
 
+      <!-- Selamat Datang -->
+      <section>
+        <div class="text-center my-4">
+          <h2 class="title-border fs-2">Selamat Datang</h2>
+        </div>
+        <div class="container-fluid parallax2 p-0" style="position: relative">
+          <!--
+          <img
+            class="img-banner after-banner-img"
+            src="./assets/background.png"
+            alt="background"
+            style="
+              filter: brightness(50%);
+              position: relative;
+              width: 100vw;
+              box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.75);
+              margin: none;
+            "
+          />
+-->
+          <video
+            width="399px"
+            height="100%"
+            autoplay
+            muted
+            loop
+            style="
+              position: absolute;
+              top: -0.1px;
+              z-index: 1;
+              left: 50%;
+              transform: translateX(-50%);
+            "
+          >
+            <source src="./assets/vid.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+      <!-- Galeri Produk -->
+      <section>
+        <div class="text-center my-4">
+          <h2 class="title-border fs-2">Intip Koleksi</h2>
+        </div>
+        <div class="row px-2">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img
+              src="./assets/kain1.jpeg"
+              data-hover-src="./assets/kain2.jpeg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="kain1"
+            />
+
+            <img
+              src="./assets/back2.jpeg"
+              data-hover-src="./assets/kutubaru4.jpeg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="full"
+            />
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              src="./assets/kain7.jpeg"
+              data-hover-src="./assets/kain8.jpeg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="kain"
+            />
+
+            <img
+              src="./assets/back1.jpeg"
+              data-hover-src="./assets/full.jpeg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="kulot"
+            />
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img
+              src="./assets/kain3.jpeg"
+              data-hover-src="./assets/kain4.jpeg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="kain"
+            />
+
+            <img
+              src="./assets/short1.jpeg"
+              data-hover-src="./assets/short2.jpeg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="panjang"
+            />
+          </div>
+        </div>
+      </section>
+
       <!-- DESKRIPSI -->
       <section id="deskripsi">
         <div class="container-fluid">
@@ -729,21 +798,21 @@
       <section id="unggulan" class="category-section">
         <div class="container-fluid p-0">
           <div class="text-center my-4">
-            <h2 class="title-border fs-2">Paling Banyak Dicari</h2>
+            <h2 class="title-border fs-2">Unggulan Kami</h2>
           </div>
           <div class="row g-1 mx-1">
-            <!-- Unggulan Pria -->
+            <!-- Unggulan Kutu Baru -->
             <div class="col-12 col-lg-6 category-item">
               <div class="unggulan-container">
                 <img
-                  src="https://haditeguh.github.io/landing_page_batik/assets/pria.jpg"
-                  data-hover-src="https://haditeguh.github.io/landing_page_batik/assets/unggulan-pria.jpg"
+                  src="./assets/unggulankutubaru1.jpeg"
+                  data-hover-src="./assets/unggulankutubaru2.jpeg"
                   alt="Men Batik Collection"
                   class="unggulan-image"
                 />
                 <div class="unggulan-overlay unggulan-overlay-bg">
                   <div class="unggulan-content">
-                    <h2 class="unggulan-title fs-2">TERLARIS PRIA</h2>
+                    <h2 class="unggulan-title fs-2">KUTU BARU</h2>
                     <a
                       class="btn btn-outline-light unggulan-btn mb-2"
                       data-bs-toggle="modal"
@@ -759,14 +828,14 @@
             <div class="col-12 col-lg-6 category-item">
               <div class="unggulan-container">
                 <img
-                  src="https://haditeguh.github.io/landing_page_batik/assets/wanita.jpg"
-                  data-hover-src="https://haditeguh.github.io/landing_page_batik/assets/unggulan-wanita.jpg"
+                  src="./assets/lilit1.jpeg"
+                  data-hover-src="./assets/lilit2.jpeg"
                   alt="Women Batik Collection"
                   class="unggulan-image"
                 />
                 <div class="unggulan-overlay unggulan-overlay-bg">
                   <div class="unggulan-content">
-                    <h2 class="unggulan-title fs-2">TERLARIS WANITA</h2>
+                    <h2 class="unggulan-title fs-2">SARUNG LILIT</h2>
                     <a
                       class="btn btn-outline-light unggulan-btn mb-2"
                       data-bs-toggle="modal"
@@ -1126,7 +1195,7 @@
           >
             <div
               class="carousel-inner mx-auto"
-              style="width: 70%; margin-top: 12px"
+              style="width: 70%; margin-top: 25px"
             >
               <div class="carousel-item active text-center">
                 <p>
@@ -1385,7 +1454,7 @@
               <div class="mt-5">
                 <hr />
                 <p><b>Alamat:</b></p>
-                <p>
+                <p class="fs-6">
                   Jl. Langensuko No.18, Salatiga, Kec. Sidorejo, Kota Salatiga,
                   Jawa Tengah 50711
                 </p>
@@ -1444,15 +1513,15 @@
     </main>
     <!-- FOOTER -->
     <footer
-      class="mybg-brown pt-5 pb-5"
+      class="mybg-brown pt-5"
       style="border-top: 5px dashed rgb(255, 232, 214)"
     >
       <div class="container">
         <div class="row">
           <!-- Deskripsi -->
-          <div class="footer-links col-12 col-md-3 mb-3">
-            <div>
-              <p>Toko Batik XYZ</p>
+          <div class="footer-links col-12 col-md-4 mb-3">
+            <div class="container text-center">
+              <h5 class="mb-4">Toko Batik XYZ</h5>
               <p class="small">
                 Batik XYZ, pilihan batik terpercaya dengan motif penuh makna dan
                 bahan berkualitas.
@@ -1460,80 +1529,94 @@
             </div>
           </div>
           <!-- Navigasi -->
-          <div class="footer-links col-12 col-md-6 mb-3">
-            <div class="container-fluid">
-              <h5>Navigasi</h5>
+          <div class="footer-links col-12 col-md-4 mb-4">
+            <div class="container">
+              <h5 class="mb-4 text-center">Navigasi</h5>
 
               <div class="row">
                 <div class="col-6">
-                  <a href="#banner">Beranda</a>
+                  <a class="text-dark" href="#banner">Beranda</a>
                 </div>
-                <div class="col-6">
-                  <a href="#banner">Deskripsi Batik</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <a href="#banner">Produk Unggulan</a>
-                </div>
-                <div class="col-6">
-                  <a href="#banner">Produk</a>
+                <div class="col-6 text-end">
+                  <a class="text-dark" href="#banner">Batik</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <a href="#banner">Tentang Kami</a>
+                  <a class="text-dark" href="#banner">Unggulan</a>
                 </div>
-                <div class="col-6">
-                  <a href="#banner">Ulasan</a>
+                <div class="col-6 text-end">
+                  <a class="text-dark" href="#banner">Produk</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <a href="#banner">Pertanyaan</a>
+                  <a class="text-dark" href="#banner">Tentang</a>
                 </div>
+                <div class="col-6 text-end">
+                  <a class="text-dark" href="#banner">Ulasan</a>
+                </div>
+              </div>
+              <div class="row">
                 <div class="col-6">
-                  <a href="#banner">Maps</a>
+                  <a class="text-dark" href="#banner">Pertanyaan</a>
+                </div>
+                <div class="col-6 text-end">
+                  <a class="text-dark" href="#banner">Maps</a>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Tautan -->
-          <div class="footer-links col-12 col-md-3 mb-3">
-            <div class="container-fluid">
-              <h5>Tautan</h5>
-              <a href="https://www.google.com" target="_blank">
-                <img
-                  src="./assets/tiktok.svg"
-                  alt="Logo"
-                  style="height: 32px"
-                />
-              </a>
-              <a href="https://www.google.com" target="_blank">
-                <img
-                  src="./assets/tokopediaa.svg"
-                  alt="Logo"
-                  style="height: 32px"
-                />
-              </a>
-              <a href="https://www.google.com" target="_blank">
-                <img src="./assets/ig.svg" alt="Logo" style="height: 28px" />
-              </a>
+          <div class="footer-links col-12 col-md-4 mb-4">
+            <div class="container text-center">
+              <h5 class="mb-4">Tautan</h5>
+              <div class="row">
+                <div class="col col-md-3">
+                  <a href="https://www.google.com" target="_blank">
+                    <img
+                      src="./assets/tiktok.svg"
+                      alt="Logo"
+                      style="height: 28px"
+                    />
+                  </a>
+                </div>
+                <div class="col col-md-3">
+                  <a href="https://www.google.com" target="_blank">
+                    <img
+                      src="./assets/tokopediaa.svg"
+                      alt="Logo"
+                      style="height: 32px"
+                    />
+                  </a>
+                </div>
+                <div class="col col-md-3">
+                  <a href="https://www.google.com" target="_blank">
+                    <img
+                      src="./assets/ig.svg"
+                      alt="Logo"
+                      style="height: 28px"
+                    />
+                  </a>
+                </div>
 
-              <a href="https://www.google.com" target="_blank">
-                <img
-                  src="./assets/shopee.svg"
-                  alt="Logo"
-                  style="height: 32px"
-                />
-              </a>
+                <div class="col col-md-3">
+                  <a href="https://www.google.com" target="_blank">
+                    <img
+                      src="./assets/shopee.svg"
+                      alt="Logo"
+                      style="height: 32px"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Bottom -->
-        <div class="text-center border-top pt-4 mt-2">
+        <div class="text-center border-top py-4 mt-2">
           <small>&copy; 2025 Batik XYZ. All rights reserved.</small>
         </div>
       </div>
@@ -1575,6 +1658,17 @@
             img.src = originalSrc;
           });
         });
+
+      document.querySelectorAll("img[data-hover-src]").forEach(function (img) {
+        const originalSrc = img.src;
+        const hoverSrc = img.getAttribute("data-hover-src");
+        img.addEventListener("mouseenter", function () {
+          if (hoverSrc) img.src = hoverSrc;
+        });
+        img.addEventListener("mouseleave", function () {
+          img.src = originalSrc;
+        });
+      });
     </script>
   </body>
 </html>
