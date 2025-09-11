@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Vend+Sans:wght@500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Vend+Sans:wght@300..700&display=swap");
 
       .vend {
         font-family: "Vend Sans", sans-serif;
@@ -386,6 +386,14 @@
         }
         .after-banner-img {
           opacity: 0.01;
+        }
+
+        .tautan {
+          width: 60vw;
+        }
+
+        .tautan img {
+          margin-bottom: 15px;
         }
       }
 
@@ -1367,38 +1375,68 @@
                 </div>
               </div>
 
-              <!-- Alamat & Jam operasional -->
+              <!-- Alamat & Jam operasional & CTA -->
               <div class="mt-5">
                 <hr />
-                <p><b>Alamat:</b></p>
-                <p class="fs-6">
-                  Jl. Langensuko No.18, Salatiga, Kec. Sidorejo, Kota Salatiga,
-                  Jawa Tengah 50711
-                </p>
+                <div class="my-5">
+                  <p class="fw-bold">Alamat:</p>
+                  <p class="fs-6">
+                    Jl. Langensuko No.18, Salatiga, Kec. Sidorejo, Kota
+                    Salatiga, Jawa Tengah 50711
+                  </p>
+                </div>
 
-                <p><b>Jam Operasional:</b></p>
-                <table
-                  class="table table-striped table-hover text-center align-middle"
-                >
-                  <thead>
-                    <tr>
-                      <th scope="col">Hari</th>
-                      <th scope="col">Jam Buka</th>
-                      <th scope="col">Jam Tutup</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Selasa - Minggu</td>
-                      <td>11.00</td>
-                      <td>20.00</td>
-                    </tr>
-                    <tr>
-                      <td>Senin</td>
-                      <td colspan="2"><b>Toko Tutup</b></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="my-5">
+                  <p class="fw-bold">Jam Operasional:</p>
+                  <table
+                    class="table table-striped table-hover text-center align-middle"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">Hari</th>
+                        <th scope="col">Jam Buka</th>
+                        <th scope="col">Jam Tutup</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Selasa - Minggu</td>
+                        <td>11.00</td>
+                        <td>20.00</td>
+                      </tr>
+                      <tr>
+                        <td>Senin</td>
+                        <td colspan="2" class="fw-bold">Toko Tutup</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="mt-5">
+                  <p class="fw-bold">Pesan via WhatsApp:</p>
+                  <button
+                    type="button"
+                    class="btn btn-form rounded-pill"
+                    style="rotate: 0deg; padding: 10px 15px"
+                  >
+                    <a
+                      href="https://www.google.com"
+                      target="_blank"
+                      style="
+                        display: block;
+                        align-items: center;
+                        text-decoration: none;
+                      "
+                    >
+                      <img
+                        src="https://haditeguh.github.io/landing_page_batik/assets/logo/wa.svg"
+                        alt="Logo"
+                        style="height: 32px"
+                      />
+                      <span class="fw-bold text-dark">Buka WhatsApp</span>
+                    </a>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1487,10 +1525,10 @@
 
           <!-- Tautan -->
           <div class="footer-links col-12 col-md-4 mb-4">
-            <div class="container text-center">
+            <div class="container tautan text-center">
               <h5 class="mb-4">Tautan</h5>
               <div class="row">
-                <div class="col col-md-3">
+                <div class="col col-md-2">
                   <a href="https://www.google.com" target="_blank">
                     <img
                       src="https://haditeguh.github.io/landing_page_batik/assets/logo/tiktok.svg"
@@ -1499,7 +1537,7 @@
                     />
                   </a>
                 </div>
-                <div class="col col-md-3">
+                <div class="col col-md-2">
                   <a href="https://www.google.com" target="_blank">
                     <img
                       src="https://haditeguh.github.io/landing_page_batik/assets/logo/ig.svg"
@@ -1508,7 +1546,7 @@
                     />
                   </a>
                 </div>
-                <div class="col col-md-3">
+                <div class="col col-md-2">
                   <a href="https://www.google.com" target="_blank">
                     <img
                       src="https://haditeguh.github.io/landing_page_batik/assets/logo/fb.svg"
@@ -1517,16 +1555,16 @@
                     />
                   </a>
                 </div>
-                <div class="col col-md-3">
+                <div class="col col-md-2">
                   <a href="https://www.google.com" target="_blank">
                     <img
                       src="https://haditeguh.github.io/landing_page_batik/assets/logo/wa.svg"
                       alt="Logo"
-                      style="height: 28px"
+                      style="height: 32px"
                     />
                   </a>
                 </div>
-                <div class="col col-md-3">
+                <div class="col col-md-2">
                   <a href="https://www.google.com" target="_blank">
                     <img
                       src="https://haditeguh.github.io/landing_page_batik/assets/logo/shopee.svg"
@@ -1536,7 +1574,7 @@
                   </a>
                 </div>
 
-                <div class="col col-md-3">
+                <div class="col col-md-2">
                   <a href="https://www.google.com" target="_blank">
                     <img
                       src="https://haditeguh.github.io/landing_page_batik/assets/logo/tokopediaa.svg"
