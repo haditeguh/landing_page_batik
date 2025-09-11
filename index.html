@@ -118,7 +118,7 @@
 
       .navbar-collapse.show {
         height: 100vh;
-        line-height: 5;
+        line-height: 2.5;
       }
 
       .navbar-nav {
@@ -151,7 +151,6 @@
         color: rgb(71, 76, 67) !important;
       }
 
-      /* Category Section Styles */
       .category-section {
         margin-top: 0;
       }
@@ -237,7 +236,6 @@
         transform: translateY(-2px);
       }
 
-      /* Hover Effects */
       .category-container:hover .category-image,
       .unggulan-container:hover .unggulan-image {
         transform: scale(1.05);
@@ -379,6 +377,12 @@
         rotate: -2deg;
       }
 
+      .nav-link.active {
+        background: #c49a6c;
+        color: white;
+        border-radius: 5px;
+      }
+
       @media (max-width: 375px) {
         #ig_frame {
           width: 300px;
@@ -404,15 +408,13 @@
         }
       }
 
-      /* Extra small devices (e.g., phones) */
       @media (max-width: 575.98px) {
-        /* Styles for extra small screens */
         .banner-text-properties {
           font-size: 3rem;
         }
 
         .category-item {
-          height: 50vh; /* Compact on small phones */
+          height: 50vh;
         }
 
         .category-title {
@@ -448,15 +450,13 @@
         }
       }
 
-      /* Small devices (e.g., portrait tablets, large phones) */
       @media (min-width: 576px) and (max-width: 767.98px) {
-        /* Styles for small screens */
         .banner-text-properties {
           font-size: 3rem;
         }
 
         .category-item {
-          height: 60vh; /* Even shorter on mobile */
+          height: 60vh;
         }
 
         .category-description {
@@ -483,12 +483,9 @@
         }
       }
 
-      /* Medium devices (e.g., landscape tablets, desktops) */
       @media (min-width: 768px) and (max-width: 991.98px) {
-        /* Styles for medium screens */
-
         .category-item {
-          height: 70vh; /* Shorter height on tablets */
+          height: 70vh;
         }
 
         .category-title {
@@ -519,18 +516,7 @@
         }
       }
 
-      /* Large devices (e.g., desktops) */
-      @media (min-width: 992px) and (max-width: 1199.98px) {
-        /* Styles for large screens */
-        .deskripsi-text p {
-          margin-left: -10%;
-        }
-      }
-
-      /* Extra large devices (e.g., large desktops) */
-      @media (min-width: 1200px) {
-        /* Styles for extra large screens */
-
+      @media (min-width: 992px) and (max-width: 1200px) {
         .deskripsi-text p {
           margin-left: -10%;
         }
@@ -543,7 +529,7 @@
         class="navbar navbar-light navbar-expand-lg nav fixed-top mybg-white"
       >
         <div class="container-fluid px-md-5">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#banner">
             <img
               src="https://haditeguh.github.io/landing_page_batik/assets/logo/html-5.png"
               alt="tes"
@@ -569,13 +555,16 @@
             id="navbarNav"
           >
             <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="#kategori"
-                >Produk</a
-              >
-              <a class="nav-link" href="#tentang">Tentang</a>
+              <a class="nav-link" aria-current="page" href="#banner">Beranda</a>
+              <a class="nav-link" href="#unggulan">Unggulan</a>
+              <a class="nav-link" href="#tentang_batik">Batik</a>
+              <a class="nav-link" href="#produk">Produk</a>
+              <a class="nav-link" href="#galeri">Galeri</a>
+              <a class="nav-link" href="#tentang_kami">Tentang</a>
               <a class="nav-link" href="#ulasan">Ulasan</a>
               <a class="nav-link" href="#pertanyaan">Pertanyaan</a>
-              <a class="nav-link" href="#kontak">Kontak</a>
+              <a class="nav-link" href="#sosmed">Sosmed</a>
+              <a class="nav-link" href="#formMapsCTA">Lokasi & Kontak</a>
             </div>
           </div>
         </div>
@@ -585,7 +574,7 @@
       <!-- BANNER -->
       <section id="banner">
         <div class="center-banner-text">
-          <h1 class="myfg-brown banner-text banner-text-properties">
+          <h1 class="myfg-dark banner-text text-center banner-text-properties">
             <strong>Selamat Datang</strong>
           </h1>
         </div>
@@ -630,8 +619,217 @@
         </div>
       </section>
 
+      <!-- Produk Unggulan-->
+      <section id="unggulan" class="category-section">
+        <div class="container-fluid p-0">
+          <div class="text-center my-4">
+            <h2 class="title-border fs-2">Unggulan Kami</h2>
+          </div>
+          <div class="row g-1 mx-1">
+            <!-- Unggulan Kutu Baru -->
+            <div class="col-12 col-lg-6 category-item">
+              <div class="unggulan-container">
+                <img
+                  src="https://haditeguh.github.io/landing_page_batik/assets/img/unggulankutubaru1.jpeg"
+                  data-hover-src="https://haditeguh.github.io/landing_page_batik/assets/img/unggulankutubaru2.jpeg"
+                  alt="Men Batik Collection"
+                  class="unggulan-image"
+                />
+                <div class="unggulan-overlay unggulan-overlay-bg">
+                  <div class="unggulan-content">
+                    <h2 class="unggulan-title fs-2">KUTU BARU</h2>
+                    <a
+                      class="btn btn-outline-light unggulan-btn mb-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalPria"
+                    >
+                      Lihat Produk
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Unggulan Wanita -->
+            <div class="col-12 col-lg-6 category-item">
+              <div class="unggulan-container">
+                <img
+                  src="https://haditeguh.github.io/landing_page_batik/assets/img/lilit1.jpeg"
+                  data-hover-src="https://haditeguh.github.io/landing_page_batik/assets/img/lilit2.jpeg"
+                  alt="Women Batik Collection"
+                  class="unggulan-image"
+                />
+                <div class="unggulan-overlay unggulan-overlay-bg">
+                  <div class="unggulan-content">
+                    <h2 class="unggulan-title fs-2">SARUNG LILIT</h2>
+                    <a
+                      class="btn btn-outline-light unggulan-btn mb-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalWanita"
+                    >
+                      Lihat Produk
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESKRIPSI -->
+      <section id="tentang_batik">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="text-center my-4">
+              <h2 class="title-border fs-2">Corak Keindahan Budaya</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col-12 col-md-6 text-center d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="https://haditeguh.github.io/landing_page_batik/assets/img/banner.png"
+                alt="batik"
+                class="deskripsi-img base-border"
+              />
+            </div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+              <div class="deskripsi-container container-fluid">
+                <div class="deskripsi-content text-start">
+                  <div class="deskripsi-text myfg-dark mt-4 mt-lg-0">
+                    <p class="px-1">
+                      Batik bukan hanya pakaian, tapi kisah yang terlukis di
+                      setiap helai kain. Setiap motif menyimpan makna, doa, dan
+                      harapan dari budaya yang diwariskan turun-temurun. Kami
+                      percaya, batik bukan hanya busana, tetapi juga cara untuk
+                      merasakan kedekatan dengan akar tradisi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KATEGORI -->
+      <section id="produk" class="category-section">
+        <div class="container-fluid p-0">
+          <div class="text-center my-4">
+            <h2 class="title-border">Jelajahi Gaya Batikmu</h2>
+          </div>
+          <div class="row g-1 mx-1">
+            <!-- Category 1 -->
+            <div class="col-lg-6 col-12 category-item">
+              <div class="category-container">
+                <img
+                  src="https://haditeguh.github.io/landing_page_batik/assets/img/kemejapria.jpeg"
+                  alt="Men Batik Collection"
+                  class="category-image"
+                />
+                <div class="category-overlay category-overlay-bg">
+                  <div class="category-content">
+                    <h2 class="category-title fs-2">PRIA</h2>
+                    <p class="category-description">
+                      Koleksi batik pria modern dan elegan
+                    </p>
+                    <a
+                      class="btn btn-outline-light category-btn mb-2"
+                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
+                      target="_blank"
+                    >
+                      Lihat Koleksi
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="col-lg-6 col-12 category-item">
+              <div class="category-container">
+                <img
+                  src="https://haditeguh.github.io/landing_page_batik/assets/img/blue.jpeg"
+                  alt="Women Batik Collection"
+                  class="category-image"
+                />
+                <div class="category-overlay category-overlay-bg">
+                  <div class="category-content">
+                    <h2 class="category-title fs-2">WANITA</h2>
+                    <p class="category-description">
+                      Koleksi batik wanita yang memukau
+                    </p>
+                    <a
+                      class="btn btn-outline-light category-btn mb-2"
+                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
+                      target="_blank"
+                    >
+                      Lihat Koleksi
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="col-lg-6 col-12 category-item">
+              <div class="category-container">
+                <img
+                  src="https://haditeguh.github.io/landing_page_batik/assets/img/kain.jpeg"
+                  alt="Kids Batik Collection"
+                  class="category-image"
+                />
+                <div class="category-overlay category-overlay-bg">
+                  <div class="category-content">
+                    <h2 class="category-title fs-2">KAIN BATIK</h2>
+                    <p class="category-description">
+                      Beragam koleksi kain batik berkualitas
+                    </p>
+                    <a
+                      class="btn btn-outline-light category-btn mb-2"
+                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
+                      target="_blank"
+                    >
+                      Lihat Koleksi
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="col-lg-6 col-12 category-item">
+              <div class="category-container">
+                <img
+                  src="https://haditeguh.github.io/landing_page_batik/assets/img/aksesoris.jpeg"
+                  alt="Batik Accessories Collection"
+                  class="category-image"
+                />
+                <div class="category-overlay category-overlay-bg">
+                  <div class="category-content">
+                    <h2 class="category-title fs-2">AKSESORIS</h2>
+                    <p class="category-description">
+                      Mulai dari Kotak Tisu, Kalung, Syal, dan beragam koleksi
+                      lainnya
+                    </p>
+                    <a
+                      class="btn btn-outline-light category-btn mb-2"
+                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
+                      target="_blank"
+                    >
+                      Lihat Koleksi
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Galeri Produk -->
-      <section>
+      <section id="galeri">
         <div class="text-center my-4">
           <h2 class="title-border fs-2">Intip Koleksi</h2>
         </div>
@@ -686,92 +884,353 @@
         </div>
       </section>
 
-      <!-- DESKRIPSI -->
-      <section id="deskripsi">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="text-center my-4">
-              <h2 class="title-border fs-2">Corak Keindahan Budaya</h2>
+      <!-- TENTANG -->
+      <section id="tentang_kami">
+        <div class="text-center my-4 fs-2">
+          <h2 class="title-border">Kami dan Batik</h2>
+        </div>
+        <div class="about-container container-fluid parallax">
+          <div
+            class="d-flex justify-content-center align-items-center h-100 mx-auto text-center"
+            style="width: 90%"
+          >
+            <div class="myfg-white">
+              <p class="px-1 px-md-5">
+                Batik XYZ menghadirkan koleksi batik pilihan dengan sentuhan
+                modern, nyaman dipakai, dan penuh makna. Jadikan setiap momen
+                lebih elegan bersama batik terbaik dari kami.
+              </p>
             </div>
           </div>
-          <div class="row">
+        </div>
+      </section>
+
+      <!-- ULASAN -->
+      <section id="ulasan">
+        <div class="ulasan-container container mybg-white">
+          <div class="text-center my-4">
+            <h2 class="title-border">Kepercayaan Pelanggan</h2>
+          </div>
+          <div
+            id="carouselControls"
+            class="border-content base-border carousel carousel-dark slide"
+            data-bs-ride="carousel"
+          >
             <div
-              class="col-12 col-md-6 text-center d-flex align-items-center justify-content-center"
+              class="carousel-inner mx-auto"
+              style="width: 70%; margin-top: 25px"
             >
-              <img
-                src="https://haditeguh.github.io/landing_page_batik/assets/img/banner.png"
-                alt="batik"
-                class="deskripsi-img base-border"
-              />
+              <div class="carousel-item active text-center">
+                <p>
+                  Saya pesan 2 kutu baru buat anak, alhamdulillah pas ukurannya
+                  pdhl kita cuman kasih ukurannya S,M atau L, bahannya nya pun
+                  bagus pokoknya recomended deh
+                </p>
+                <hr />
+                <p class="fs-4">Lily Kariem</p>
+              </div>
+              <div class="carousel-item text-center">
+                <p>
+                  Tempatnya cozy.. nyaman n service excelent.. model2 bajunya
+                  kekinian.. keluarga kami sangat menyukai product yg dibuatnya
+                  ... terimakasih batik tjokro.. sdh ada utk kita...
+                </p>
+                <hr />
+                <p class="fs-4">Zara Khainera</p>
+              </div>
+              <div class="carousel-item text-center">
+                <p>
+                  Batik Tjokro tempat yg tepat utk beli Batik. Warna, model &
+                  bahan nya gak usah diragukan lagi. Pengiriman dr Salatiga ke
+                  JKT epat waktu. Yang pasti nagih deh....👍
+                </p>
+                <hr />
+                <p class="fs-4">Romel Mohan</p>
+              </div>
             </div>
-            <div class="col-12 col-md-6 d-flex align-items-center">
-              <div class="deskripsi-container container-fluid">
-                <div class="deskripsi-content text-start">
-                  <div class="deskripsi-text myfg-dark mt-4 mt-lg-0">
-                    <p class="px-1">
-                      Batik bukan hanya pakaian, tapi kisah yang terlukis di
-                      setiap helai kain. Setiap motif menyimpan makna, doa, dan
-                      harapan dari budaya yang diwariskan turun-temurun. Kami
-                      percaya, batik bukan hanya busana, tetapi juga cara untuk
-                      merasakan kedekatan dengan akar tradisi.
-                    </p>
-                  </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERTANYAAN -->
+      <section id="pertanyaan">
+        <div class="text-center my-4">
+          <h2 class="title-border">Pertanyaan Umum</h2>
+        </div>
+        <div
+          class="pertanyaan-container container border-content base-border my-4"
+        >
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Kasih tau range harganya dong min..
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body mybg-white myfg-dark">
+                  For fashion wanita : IDR 80.000 - 200.000 <br />
+                  For fashion pria : IDR 70.000 - 175.000 <br />
+                  For accessories by Batik Tjokro : IDR 20.000 - 200.000
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Kak ada diskon ga?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body mybg-white myfg-dark">
+                  Ada ya bestie... <br />
+                  Kalian bisa cek di highlight atau sorotan Instagram Batik
+                  Tjokro dengan tulisan Discount.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Ada toko onlinenya kak?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body mybg-white myfg-dark">
+                  Ada dong bestie... <br />
+                  Yaitu di Shopee dan Tokopedia. <br />
+                  Oiya setiap hari Rabu, Jumat dan Minggu kita juga live di
+                  Shopee tiap pukul 6 sore dan ada voucher diskon maupun
+                  beberapa produk yang sedang ada diskon
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Produk Unggulan-->
-      <section id="unggulan" class="category-section">
-        <div class="container-fluid p-0">
-          <div class="text-center my-4">
-            <h2 class="title-border fs-2">Unggulan Kami</h2>
-          </div>
-          <div class="row g-1 mx-1">
-            <!-- Unggulan Kutu Baru -->
-            <div class="col-12 col-lg-6 category-item">
-              <div class="unggulan-container">
-                <img
-                  src="https://haditeguh.github.io/landing_page_batik/assets/img/unggulankutubaru1.jpeg"
-                  data-hover-src="https://haditeguh.github.io/landing_page_batik/assets/img/unggulankutubaru2.jpeg"
-                  alt="Men Batik Collection"
-                  class="unggulan-image"
-                />
-                <div class="unggulan-overlay unggulan-overlay-bg">
-                  <div class="unggulan-content">
-                    <h2 class="unggulan-title fs-2">KUTU BARU</h2>
-                    <a
-                      class="btn btn-outline-light unggulan-btn mb-2"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modalPria"
-                    >
-                      Lihat Produk
-                    </a>
-                  </div>
+
+      <!-- Sosmed Embedded Section -->
+      <section id="sosmed">
+        <div class="text-center my-4">
+          <h2 class="title-border">
+            Follow Dulu, <br />
+            Belanja Kemudian :-)
+          </h2>
+        </div>
+        <div class="container">
+          <div class="row">
+            <!-- IG -->
+            <div class="col-12 col-md-6 embed">
+              <div class="iframe-wrapper-ig ig-wrapper">
+                <div class="iframe-border iframe-border-ig">
+                  <iframe
+                    id="ig_frame"
+                    src="https://haditeguh.github.io/landing_page_batik/ig.html"
+                  ></iframe>
                 </div>
               </div>
             </div>
-            <!-- Unggulan Wanita -->
-            <div class="col-12 col-lg-6 category-item">
-              <div class="unggulan-container">
-                <img
-                  src="https://haditeguh.github.io/landing_page_batik/assets/img/lilit1.jpeg"
-                  data-hover-src="https://haditeguh.github.io/landing_page_batik/assets/img/lilit2.jpeg"
-                  alt="Women Batik Collection"
-                  class="unggulan-image"
-                />
-                <div class="unggulan-overlay unggulan-overlay-bg">
-                  <div class="unggulan-content">
-                    <h2 class="unggulan-title fs-2">SARUNG LILIT</h2>
+            <!-- TIKTOK -->
+            <div class="col-12 col-md-6 embed">
+              <div class="iframe-wrapper-tiktok mx-auto">
+                <div class="iframe-border iframe-border-tiktok">
+                  <iframe
+                    id="tiktok_frame"
+                    src="https://haditeguh.github.io/landing_page_batik/tiktok.html"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORM & PETA -->
+      <section id="formMapsCTA" style="margin-top: -75px">
+        <div class="container-fluid">
+          <div class="row d-flex flex-column flex-md-row mx-1 g-5">
+            <!-- Left -->
+            <div class="form-maps col-12 col-lg-6 mx-auto">
+              <div class="text-center my-4">
+                <h2 class="title-border">Sampaikan Pesan</h2>
+              </div>
+              <label for="nama" class="form-label">Nama: </label>
+              <input
+                id="nama"
+                class="form-control mb-2"
+                type="text"
+                placeholder="Nama Kamu"
+                aria-label="nama"
+              />
+              <label for="email" class="form-label">Email: </label>
+              <input
+                type="email"
+                class="form-control mb-2"
+                id="email"
+                placeholder="nama@mail.com"
+                autocomplete="email"
+              />
+              <label for="text" class="form-label">Pesan: </label>
+              <textarea
+                class="form-control mb-2"
+                id="text"
+                placeholder="Tulis pesanmu disini."
+                rows="3"
+              ></textarea>
+
+              <div class="row">
+                <div class="col text-start mt-4">
+                  <button
+                    type="button"
+                    class="btn-form btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modal_id"
+                  >
+                    Kirim Pesan
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right -->
+            <div class="form-maps col-12 col-lg-6 align-self-center mx-auto">
+              <div class="text-center my-4">
+                <h2 class="title-border">Temukan Kami</h2>
+              </div>
+              <div class="overflow-hidden maps-style base-border">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.250758917845!2d110.50324859999999!3d-7.3257071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a790079a12fb7%3A0xb0bd2268dfb97c55!2sBatik%20Tjokro%20Salatiga%20(%20pembuatan%20seragam%2C%20baju%20batik%20custom%2C%20blus%20batik%20%2C%20kemeja%20batik%20%2C%20kain%20batik%20%2C%20aksesoris%20etnik!5e0!3m2!1sid!2sid!4v1757576561173!5m2!1sid!2sid"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  >
+                  </iframe>
+                </div>
+              </div>
+
+              <!-- Alamat & Jam operasional & CTA -->
+              <div class="mt-5">
+                <hr />
+                <div class="my-5">
+                  <p class="fw-bold">Alamat:</p>
+                  <p class="fs-6">
+                    Jl. Langensuko No.18, Salatiga, Kec. Sidorejo, Kota
+                    Salatiga, Jawa Tengah 50711
+                  </p>
+                </div>
+
+                <div class="my-5">
+                  <p class="fw-bold">Jam Operasional:</p>
+                  <table
+                    class="table table-striped table-hover text-center align-middle"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">Hari</th>
+                        <th scope="col">Jam Buka</th>
+                        <th scope="col">Jam Tutup</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Selasa - Minggu</td>
+                        <td>11.00</td>
+                        <td>20.00</td>
+                      </tr>
+                      <tr>
+                        <td>Senin</td>
+                        <td colspan="2" class="fw-bold">Toko Tutup</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="mt-5">
+                  <p class="fw-bold">Pesan via WhatsApp:</p>
+                  <button
+                    type="button"
+                    class="btn btn-form rounded-pill"
+                    style="rotate: 0deg; padding: 5px 15px"
+                  >
                     <a
-                      class="btn btn-outline-light unggulan-btn mb-2"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modalWanita"
+                      href="./wa.html"
+                      target="_blank"
+                      style="
+                        display: block;
+                        align-items: center;
+                        text-decoration: none;
+                      "
                     >
-                      Lihat Produk
+                      <img
+                        src="https://haditeguh.github.io/landing_page_batik/assets/logo/wa.svg"
+                        alt="Logo"
+                        style="height: 32px"
+                      />
+                      <span class="fw-bold text-dark">Buka WhatsApp</span>
                     </a>
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -974,475 +1433,6 @@
         </div>
       </div>
 
-      <!-- KATEGORI -->
-      <section id="kategori" class="category-section">
-        <div class="container-fluid p-0">
-          <div class="text-center my-4">
-            <h2 class="title-border">Jelajahi Gaya Batikmu</h2>
-          </div>
-          <div class="row g-1 mx-1">
-            <!-- Category 1 -->
-            <div class="col-lg-6 col-12 category-item">
-              <div class="category-container">
-                <img
-                  src="https://haditeguh.github.io/landing_page_batik/assets/img/kemejapria.jpeg"
-                  alt="Men Batik Collection"
-                  class="category-image"
-                />
-                <div class="category-overlay category-overlay-bg">
-                  <div class="category-content">
-                    <h2 class="category-title fs-2">PRIA</h2>
-                    <p class="category-description">
-                      Koleksi batik pria modern dan elegan
-                    </p>
-                    <a
-                      class="btn btn-outline-light category-btn mb-2"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
-                    >
-                      Lihat Koleksi
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Category 2 -->
-            <div class="col-lg-6 col-12 category-item">
-              <div class="category-container">
-                <img
-                  src="https://haditeguh.github.io/landing_page_batik/assets/img/blue.jpeg"
-                  alt="Women Batik Collection"
-                  class="category-image"
-                />
-                <div class="category-overlay category-overlay-bg">
-                  <div class="category-content">
-                    <h2 class="category-title fs-2">WANITA</h2>
-                    <p class="category-description">
-                      Koleksi batik wanita yang memukau
-                    </p>
-                    <a
-                      class="btn btn-outline-light category-btn mb-2"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
-                    >
-                      Lihat Koleksi
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Category 3 -->
-            <div class="col-lg-6 col-12 category-item">
-              <div class="category-container">
-                <img
-                  src="https://haditeguh.github.io/landing_page_batik/assets/img/kain.jpeg"
-                  alt="Kids Batik Collection"
-                  class="category-image"
-                />
-                <div class="category-overlay category-overlay-bg">
-                  <div class="category-content">
-                    <h2 class="category-title fs-2">KAIN BATIK</h2>
-                    <p class="category-description">
-                      Beragam koleksi kain batik berkualitas
-                    </p>
-                    <a
-                      class="btn btn-outline-light category-btn mb-2"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
-                    >
-                      Lihat Koleksi
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Category 4 -->
-            <div class="col-lg-6 col-12 category-item">
-              <div class="category-container">
-                <img
-                  src="https://haditeguh.github.io/landing_page_batik/assets/img/aksesoris.jpeg"
-                  alt="Batik Accessories Collection"
-                  class="category-image"
-                />
-                <div class="category-overlay category-overlay-bg">
-                  <div class="category-content">
-                    <h2 class="category-title fs-2">AKSESORIS</h2>
-                    <p class="category-description">
-                      Mulai dari Kotak Tisu, Kalung, Syal, dan beragam koleksi
-                      lainnya
-                    </p>
-                    <a
-                      class="btn btn-outline-light category-btn mb-2"
-                      href="https://www.tokopedia.com/batiktjokro/etalase/batik-pria"
-                      target="_blank"
-                    >
-                      Lihat Koleksi
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TENTANG -->
-      <section id="tentang">
-        <div class="text-center my-4 fs-2">
-          <h2 class="title-border">Kami dan Batik</h2>
-        </div>
-        <div class="about-container container-fluid parallax">
-          <div
-            class="d-flex justify-content-center align-items-center h-100 mx-auto text-center"
-            style="width: 90%"
-          >
-            <div class="myfg-white">
-              <p class="px-1 px-md-5">
-                Batik XYZ menghadirkan koleksi batik pilihan dengan sentuhan
-                modern, nyaman dipakai, dan penuh makna. Jadikan setiap momen
-                lebih elegan bersama batik terbaik dari kami.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ULASAN -->
-      <section id="ulasan">
-        <div class="ulasan-container container mybg-white">
-          <div class="text-center my-4">
-            <h2 class="title-border">Kepercayaan Pelanggan</h2>
-          </div>
-          <div
-            id="carouselControls"
-            class="border-content base-border carousel carousel-dark slide"
-            data-bs-ride="carousel"
-          >
-            <div
-              class="carousel-inner mx-auto"
-              style="width: 70%; margin-top: 25px"
-            >
-              <div class="carousel-item active text-center">
-                <p>
-                  Saya pesan 2 kutu baru buat anak, alhamdulillah pas ukurannya
-                  pdhl kita cuman kasih ukurannya S,M atau L, bahannya nya pun
-                  bagus pokoknya recomended deh
-                </p>
-                <hr />
-                <p class="fs-4">Lily Kariem</p>
-              </div>
-              <div class="carousel-item text-center">
-                <p>
-                  Tempatnya cozy.. nyaman n service excelent.. model2 bajunya
-                  kekinian.. keluarga kami sangat menyukai product yg dibuatnya
-                  ... terimakasih batik tjokro.. sdh ada utk kita...
-                </p>
-                <hr />
-                <p class="fs-4">Zara Khainera</p>
-              </div>
-              <div class="carousel-item text-center">
-                <p>
-                  Batik Tjokro tempat yg tepat utk beli Batik. Warna, model &
-                  bahan nya gak usah diragukan lagi. Pengiriman dr Salatiga ke
-                  JKT epat waktu. Yang pasti nagih deh....👍
-                </p>
-                <hr />
-                <p class="fs-4">Romel Mohan</p>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselControls"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselControls"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- PERTANYAAN -->
-      <section id="pertanyaan">
-        <div class="text-center my-4">
-          <h2 class="title-border">Pertanyaan Umum</h2>
-        </div>
-        <div
-          class="pertanyaan-container container border-content base-border my-4"
-        >
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseOne"
-                >
-                  Kasih tau range harganya dong min..
-                </button>
-              </h2>
-              <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body mybg-white myfg-dark">
-                  For fashion wanita : IDR 80.000 - 200.000 <br />
-                  For fashion pria : IDR 70.000 - 175.000 <br />
-                  For accessories by Batik Tjokro : IDR 20.000 - 200.000
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button
-                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseTwo"
-                >
-                  Kak ada diskon ga?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingTwo"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body mybg-white myfg-dark">
-                  Ada ya bestie... <br />
-                  Kalian bisa cek di highlight atau sorotan Instagram Batik
-                  Tjokro dengan tulisan Discount.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button
-                  class="accordion-button collapsed mybg-white myfg-dark fs-5"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseThree"
-                >
-                  Ada toko onlinenya kak?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseThree"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingThree"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body mybg-white myfg-dark">
-                  Ada dong bestie... <br />
-                  Yaitu di Shopee dan Tokopedia. <br />
-                  Oiya setiap hari Rabu, Jumat dan Minggu kita juga live di
-                  Shopee tiap pukul 6 sore dan ada voucher diskon maupun
-                  beberapa produk yang sedang ada diskon
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SOSMED Section -->
-      <section>
-        <div class="text-center my-4">
-          <h2 class="title-border">
-            Follow Dulu, <br />
-            Belanja Kemudian :-)
-          </h2>
-        </div>
-        <div class="container">
-          <div class="row">
-            <!-- IG -->
-            <div class="col-12 col-md-6 embed">
-              <div class="iframe-wrapper-ig ig-wrapper">
-                <div class="iframe-border iframe-border-ig">
-                  <iframe
-                    id="ig_frame"
-                    src="https://haditeguh.github.io/landing_page_batik/ig.html"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <!-- TIKTOK -->
-            <div class="col-12 col-md-6 embed">
-              <div class="iframe-wrapper-tiktok mx-auto">
-                <div class="iframe-border iframe-border-tiktok">
-                  <iframe
-                    id="tiktok_frame"
-                    src="https://haditeguh.github.io/landing_page_batik/tiktok.html"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FORM & PETA -->
-      <section id="formMaps" style="margin-top: -75px">
-        <div class="container-fluid">
-          <div class="row d-flex flex-column flex-md-row mx-1 g-5">
-            <!-- Left -->
-            <div class="form-maps col-12 col-lg-6 mx-auto">
-              <div class="text-center my-4">
-                <h2 class="title-border">Sampaikan Pesan</h2>
-              </div>
-              <label for="nama" class="form-label">Nama: </label>
-              <input
-                id="nama"
-                class="form-control mb-2"
-                type="text"
-                placeholder="Nama Kamu"
-                aria-label="nama"
-              />
-              <label for="email" class="form-label">Email: </label>
-              <input
-                type="email"
-                class="form-control mb-2"
-                id="email"
-                placeholder="nama@mail.com"
-                autocomplete="email"
-              />
-              <label for="text" class="form-label">Pesan: </label>
-              <textarea
-                class="form-control mb-2"
-                id="text"
-                placeholder="Tulis pesanmu disini."
-                rows="3"
-              ></textarea>
-
-              <div class="row">
-                <div class="col text-start mt-4">
-                  <button
-                    type="button"
-                    class="btn-form btn"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal_id"
-                  >
-                    Kirim Pesan
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right -->
-            <div class="form-maps col-12 col-lg-6 align-self-center mx-auto">
-              <div class="text-center my-4">
-                <h2 class="title-border">Temukan Kami</h2>
-              </div>
-              <div class="overflow-hidden maps-style base-border">
-                <div class="ratio ratio-16x9">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3957.244037911579!2d110.33759599999999!3d-7.326464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMTknMzUuMyJTIDExMMKwMjAnMTUuNCJF!5e0!3m2!1sid!2sid!4v1755585148516!5m2!1sid!2sid"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  >
-                  </iframe>
-                </div>
-              </div>
-
-              <!-- Alamat & Jam operasional & CTA -->
-              <div class="mt-5">
-                <hr />
-                <div class="my-5">
-                  <p class="fw-bold">Alamat:</p>
-                  <p class="fs-6">
-                    Jl. Langensuko No.18, Salatiga, Kec. Sidorejo, Kota
-                    Salatiga, Jawa Tengah 50711
-                  </p>
-                </div>
-
-                <div class="my-5">
-                  <p class="fw-bold">Jam Operasional:</p>
-                  <table
-                    class="table table-striped table-hover text-center align-middle"
-                  >
-                    <thead>
-                      <tr>
-                        <th scope="col">Hari</th>
-                        <th scope="col">Jam Buka</th>
-                        <th scope="col">Jam Tutup</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Selasa - Minggu</td>
-                        <td>11.00</td>
-                        <td>20.00</td>
-                      </tr>
-                      <tr>
-                        <td>Senin</td>
-                        <td colspan="2" class="fw-bold">Toko Tutup</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="mt-5">
-                  <p class="fw-bold">Pesan via WhatsApp:</p>
-                  <button
-                    type="button"
-                    class="btn btn-form rounded-pill"
-                    style="rotate: 0deg; padding: 10px 15px"
-                  >
-                    <a
-                      href="https://www.google.com"
-                      target="_blank"
-                      style="
-                        display: block;
-                        align-items: center;
-                        text-decoration: none;
-                      "
-                    >
-                      <img
-                        src="https://haditeguh.github.io/landing_page_batik/assets/logo/wa.svg"
-                        alt="Logo"
-                        style="height: 32px"
-                      />
-                      <span class="fw-bold text-dark">Buka WhatsApp</span>
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Modal Component -->
       <div
         id="modal_id"
@@ -1493,31 +1483,39 @@
                   <a class="text-dark" href="#banner">Beranda</a>
                 </div>
                 <div class="col-6 text-end">
-                  <a class="text-dark" href="#banner">Batik</a>
+                  <a class="text-dark" href="#tentang_kami">Tentang</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <a class="text-dark" href="#banner">Unggulan</a>
+                  <a class="text-dark" href="#unggulan">Unggulan</a>
                 </div>
                 <div class="col-6 text-end">
-                  <a class="text-dark" href="#banner">Produk</a>
+                  <a class="text-dark" href="#ulasan">Ulasan</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <a class="text-dark" href="#banner">Tentang</a>
+                  <a class="text-dark" href="#tentang_batik">Batik</a>
                 </div>
                 <div class="col-6 text-end">
-                  <a class="text-dark" href="#banner">Ulasan</a>
+                  <a class="text-dark" href="#pertanyaan">Pertanyaan</a>
                 </div>
               </div>
               <div class="row">
                 <div class="col-6">
-                  <a class="text-dark" href="#banner">Pertanyaan</a>
+                  <a class="text-dark" href="#produk">Produk</a>
                 </div>
                 <div class="col-6 text-end">
-                  <a class="text-dark" href="#banner">Maps</a>
+                  <a class="text-dark" href="#sosmed">Sosmed</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <a class="text-dark" href="#galeri">Galeri</a>
+                </div>
+                <div class="col-6 text-end">
+                  <a class="text-dark" href="#formMapsCTA">Lokasi & Kontak</a>
                 </div>
               </div>
             </div>
@@ -1620,7 +1618,7 @@
         .forEach(function (container) {
           const img = container.querySelector(".unggulan-image");
           const originalSrc = img.src;
-          const hoverSrc = img.getAttribute("data-hover-src"); // dummy image
+          const hoverSrc = img.getAttribute("data-hover-src");
 
           container.addEventListener("mouseenter", function () {
             if (hoverSrc) {
@@ -1642,6 +1640,56 @@
           img.src = originalSrc;
         });
       });
+
+      var sections = document.querySelectorAll("section");
+      var navLinks = document.querySelectorAll(".nav-link");
+
+      function smoothScroll(target, duration) {
+        var start = window.pageYOffset;
+        var end = target.offsetTop - 100;
+        var distance = end - start;
+        var startTime = new Date().getTime();
+
+        var interval = setInterval(function () {
+          var now = new Date().getTime();
+          var time = Math.min(1, (now - startTime) / duration);
+          var ease = time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+          window.scrollTo(0, start + distance * ease);
+
+          if (time === 1) clearInterval(interval);
+        }, 16);
+      }
+
+      window.onscroll = function () {
+        var current = "";
+        for (var i = 0; i < sections.length; i++) {
+          var sectionTop = sections[i].offsetTop - 100;
+          var sectionHeight = sections[i].clientHeight;
+
+          if (
+            window.pageYOffset >= sectionTop &&
+            window.pageYOffset < sectionTop + sectionHeight
+          ) {
+            current = sections[i].id;
+          }
+        }
+
+        for (var j = 0; j < navLinks.length; j++) {
+          navLinks[j].className = navLinks[j].className.replace(" active", "");
+          if (navLinks[j].getAttribute("href") === "#" + current) {
+            navLinks[j].className += " active";
+          }
+        }
+      };
+
+      for (var k = 0; k < navLinks.length; k++) {
+        navLinks[k].onclick = function (e) {
+          e.preventDefault();
+          var targetId = this.getAttribute("href").substring(1);
+          var targetSection = document.getElementById(targetId);
+          smoothScroll(targetSection, 600);
+        };
+      }
     </script>
   </body>
 </html>
