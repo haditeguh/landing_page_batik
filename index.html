@@ -383,6 +383,19 @@
         border-radius: 5px;
       }
 
+      .fade-in {
+        opacity: 0;
+        transform: translateY(35px);
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
+      }
+
+      .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
       @media (max-width: 375px) {
         #ig_frame {
           width: 300px;
@@ -447,6 +460,20 @@
         #tiktok_frame {
           width: 320px;
           height: 430px;
+        }
+
+        #ulasan-prev-btn,
+        #ulasan-next-btn {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1080px) {
+        #carouselControls {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 65vh !important;
         }
       }
 
@@ -574,7 +601,9 @@
       <!-- BANNER -->
       <section id="banner">
         <div class="center-banner-text">
-          <h1 class="myfg-dark banner-text text-center banner-text-properties">
+          <h1
+            class="fade-in myfg-dark banner-text text-center banner-text-properties"
+          >
             <strong>Selamat Datang</strong>
           </h1>
         </div>
@@ -714,7 +743,7 @@
       </section>
 
       <!-- KATEGORI -->
-      <section id="produk" class="category-section">
+      <section id="produk" class="fade-in category-section">
         <div class="container-fluid p-0">
           <div class="text-center my-4">
             <h2 class="title-border">Jelajahi Gaya Batikmu</h2>
@@ -916,10 +945,7 @@
             class="border-content base-border carousel carousel-dark slide"
             data-bs-ride="carousel"
           >
-            <div
-              class="carousel-inner mx-auto"
-              style="width: 70%; margin-top: 25px"
-            >
+            <div class="carousel-inner mx-auto" style="width: 70%">
               <div class="carousel-item active text-center">
                 <p>
                   Saya pesan 2 kutu baru buat anak, alhamdulillah pas ukurannya
@@ -949,6 +975,7 @@
               </div>
             </div>
             <button
+              id="ulasan-prev-btn"
               class="carousel-control-prev"
               type="button"
               data-bs-target="#carouselControls"
@@ -961,6 +988,7 @@
               <span class="visually-hidden">Previous</span>
             </button>
             <button
+              id="ulasan-next-btn"
               class="carousel-control-next"
               type="button"
               data-bs-target="#carouselControls"
@@ -1660,7 +1688,7 @@
         }, 16);
       }
 
-      window.onscroll = function () {
+      window.addEventListener("scroll", function () {
         var current = "";
         for (var i = 0; i < sections.length; i++) {
           var sectionTop = sections[i].offsetTop - 100;
@@ -1680,7 +1708,7 @@
             navLinks[j].className += " active";
           }
         }
-      };
+      });
 
       for (var k = 0; k < navLinks.length; k++) {
         navLinks[k].onclick = function (e) {
@@ -1690,6 +1718,41 @@
           smoothScroll(targetSection, 600);
         };
       }
+    </script>
+    <script>
+      (function () {
+        var elements = document.querySelectorAll(".fade-in");
+
+        function inViewport(el) {
+          var rect = el.getBoundingClientRect();
+          var viewHeight =
+            window.innerHeight || document.documentElement.clientHeight;
+          var viewWidth =
+            window.innerWidth || document.documentElement.clientWidth;
+
+          return (
+            rect.top <= viewHeight && // bagian atas elemen sudah masuk viewport
+            rect.bottom >= 0 && // bagian bawah belum lewat ke atas
+            rect.left <= viewWidth &&
+            rect.right >= 0
+          );
+        }
+
+        function checkElements() {
+          for (var i = 0; i < elements.length; i++) {
+            if (inViewport(elements[i])) {
+              // tambahkan class 'show' jika sudah terlihat
+              if (elements[i].className.indexOf("show") === -1) {
+                elements[i].className += " show";
+              }
+            }
+          }
+        }
+
+        // Jalankan saat scroll dan saat halaman pertama kali dimuat
+        window.addEventListener("scroll", checkElements);
+        window.addEventListener("load", checkElements);
+      })();
     </script>
   </body>
 </html>
