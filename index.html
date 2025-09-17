@@ -396,6 +396,14 @@
         transform: translateY(0);
       }
 
+      .pelanggan {
+        width: 37vw;
+        min-width: 270px;
+        display: block;
+        margin: 0 auto;
+        rotate: -3deg;
+      }
+
       @media (max-width: 375px) {
         #ig_frame {
           width: 300px;
@@ -418,6 +426,12 @@
         .ig-wrapper {
           margin-left: auto;
           margin-bottom: 60px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .pelanggan {
+          width: 50vw;
         }
       }
 
@@ -1178,10 +1192,23 @@
                   </button>
                 </div>
               </div>
+
+              <!-- Pelanggan -->
+              <div class="mt-5">
+                <hr />
+                <p class="fw-bold text-center fs-4 pb-3">
+                  Our Happy Customers :-D
+                </p>
+                <img
+                  src="./assets/img/pelanggan.png"
+                  alt="pelanggan"
+                  class="base-border pelanggan"
+                />
+              </div>
             </div>
 
             <!-- Right -->
-            <div class="form-maps col-12 col-lg-6 align-self-center mx-auto">
+            <div class="form-maps col-12 col-lg-6 mx-auto">
               <div class="text-center my-4">
                 <h2 class="title-border">Temukan Kami</h2>
               </div>
@@ -1202,15 +1229,15 @@
               <div class="mt-5">
                 <hr />
                 <div class="my-5">
-                  <p class="fw-bold">Alamat:</p>
-                  <p class="fs-6">
+                  <p class="text-center fw-bold fs-4">Alamat</p>
+                  <p class="text-center fs-6">
                     Jl. Langensuko No.18, Salatiga, Kec. Sidorejo, Kota
                     Salatiga, Jawa Tengah 50711
                   </p>
                 </div>
 
                 <div class="my-5">
-                  <p class="fw-bold">Jam Operasional:</p>
+                  <p class="text-center fw-bold fs-4">Jam Operasional</p>
                   <table
                     class="table table-striped table-hover text-center align-middle"
                   >
@@ -1235,12 +1262,19 @@
                   </table>
                 </div>
 
-                <div class="mt-5">
-                  <p class="fw-bold">Pesan via WhatsApp:</p>
+                <div class="mt-5 mx-auto text-center">
+                  <p class="text-center fw-bold fs-4 fs-sm-5">
+                    Pesan via WhatsApp
+                  </p>
                   <button
                     type="button"
-                    class="btn btn-form rounded-pill"
-                    style="rotate: 0deg; padding: 5px 15px"
+                    class="btn btn-form"
+                    style="
+                      rotate: 0deg;
+                      margin-top: 20px;
+                      padding: 20px 5%;
+                      border-radius: 20px;
+                    "
                   >
                     <a
                       href="./wa.html"
@@ -1254,9 +1288,9 @@
                       <img
                         src="https://haditeguh.github.io/landing_page_batik/assets/logo/wa.svg"
                         alt="Logo"
-                        style="height: 32px"
+                        style="height: 36px; padding-right: 8px"
                       />
-                      <span class="fw-bold text-dark">Buka WhatsApp</span>
+                      <span class="fw-bold text-dark fs-5">Buka WhatsApp</span>
                     </a>
                   </button>
                 </div>
